@@ -5,6 +5,8 @@ description: Jason's default short-form video edit. Use EVERY time Jason drops r
 
 # Jason Video Editor — SOP
 
+> **Start here:** read `references/journal.md`. It holds the scored history (current best **7.7/10**), what Jason loved (locked), his corrections, and the backlog. Every new edit should beat the best score. After delivery, ask for his score and log it.
+
 The goal is an edit that makes the viewer stay, feel something, and act. It should match Jason's style exactly, with no need for him to ask for any of it.
 Every choice below has a *reason*. If a choice has no rule or reason behind it, it doesn't go in the video.
 The rules come from `references/playbook.md`, which was decoded frame-by-frame from the creator Jason studies. **Don't invent effects.**
