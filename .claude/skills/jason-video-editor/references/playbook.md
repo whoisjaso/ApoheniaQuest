@@ -219,3 +219,41 @@ Look (confirms reel 7 masking):
 - Chapter titles ("1. Film Burn") are red serif at the top.
 - Subtitles are small yellow serif in a dark box at the bottom (documentary style).
 - These videos are shot **by** the creator (handheld, moving). The transitions have to be performed while filming, so this is advice for Jason's shoots, not something added only in post.
+
+
+## 12. Hook teardown: the visual hook + the verbal hook (reel 12 · "fixing Hormozi's worst video")
+Every hook has two parts. Grade both before rendering.
+
+**Visual hook (what's on screen in the first 1–2s)**
+- **The brain processes about 6 elements at once.** His example had 25, so "the viewer has no idea what to look at". Count the elements in the first frame and keep it **≤ 6**.
+- Keep only **the one metric people care about** (revenue). Cut the rest ("in 60 days", extra columns).
+- Show change as a **from → to arrow** (a clean before/after), not a table.
+- Title text states the viewer's benefit ("HOW TO GROW YOUR BUSINESS"), not a vague label.
+- **Proof beats claims:** replace a spreadsheet with the **real payment-processor screenshot**.
+
+**Verbal hook (the first sentence)**
+- ❌ Talking about yourself and setting no expectation of value.
+- ✅ Proof + the viewer's want + a promise with a number: **"I took a business from this → to this. If you want to do the same, here are 5 things you need to fix."**
+
+**Format notes**
+- Neon label boxes (blue "VISUAL HOOK", yellow "VERBAL HOOK") with corner brackets mark what's being analysed.
+- A phone mock-up in hand shows the reel.
+- The curse is shown censored in his caption ("F*CKING"). Jason's rule overrides this: raw.
+- Hook opens on a pattern-interrupting claim: "Alex Hormozi's WORST video", then "in 2026 we're gonna make it go f*cking viral". Big red/white caption, plus a views counter (4.8M).
+
+## 13. UI / tech SFX pack (reel 13): for AI, screen and B-roll moments
+Extracted and verified: 12/12 clips, each a 1.0 match to its source (`assets/sfx/ui/`).
+The job for each sound is **inferred from its name** until a reference video shows it in use; confirm with Jason.
+
+| Sound | Use it for (inferred) |
+|---|---|
+| **Open UI** | a recreated app/UI panel or card pops in |
+| **Success UI** | a positive result appears (green number, ✓, revenue card) |
+| **Negative Glitch 1/2/3** | a problem or pain appears (red keyword, bad review, ❌) |
+| **Macbook Keyboard** | the prompt box typing out his exact prompt |
+| **Data Loading** | AI "thinking"/processing, results loading in |
+| **Glitch Transition** | a cut into or out of tech B-roll |
+| **Reverb Hit** | a statement/hook impact (alternative to Bass impact) |
+| **Gears** | "systems", "building", "engine", "automation" |
+| **Switch** | a toggle or state change on screen |
+| **Zap** | a quick electric accent on a fast pop |

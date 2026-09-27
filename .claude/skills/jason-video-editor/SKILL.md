@@ -43,7 +43,7 @@ Never `pkill -f` a pattern that matches your own shell command. It kills the too
 ## Editorial pass (the thinking, done before any code)
 1. **Read the whole transcript and name the video's one idea.** Example: "Label people → they commit → they buy."
 2. **Find the payoff moment**: the result, the number, the close. **Find the thesis line**: the promise ("I'm going to teach y'all how to…").
-3. **Hook = open loop plus pattern interrupt, both in the first 2–4 seconds:**
+3. **Hook = open loop plus pattern interrupt, both in the first 2–4 seconds.** Grade it with playbook §12: the **visual hook** has ≤6 elements, one metric, from→to, and proof. The **verbal hook** speaks to the viewer's want and promises value.
    - **Cold open:** take the payoff line itself, 1.5–3s of it ("It's seven thousand dollars. How would you like to proceed?"). Show the result before the method, which creates a curiosity gap that holds viewers until the payoff. The same seconds play again later: give the cold open its own keep-segment. cut.py maps captions per segment, so reused seconds are safe.
    - **Then the thesis line:** the taboo or direct promise, with a bass impact and a font combo. Something must move within the first 15 frames.
 4. **Keep list:**
