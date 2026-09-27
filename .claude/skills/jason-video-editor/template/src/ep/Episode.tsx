@@ -43,7 +43,7 @@ const COMBOS: { combo: ComboName; big: string; small: string; at: number; exit: 
   { combo: "modern", small: "use that", big: "AGAINST 'EM", at: B.against - 2, exit: B.against + 70, size: 110 },
   { combo: "modern", small: "you already", big: "WON", at: B.won - 2, exit: B.type - 10, size: 150 },
   { combo: "sugary", big: "fast", small: "decision", at: B.fast - 2, exit: B.labeled - 8, size: 130 },
-  { combo: "mozart", big: "Ego", small: "architect", at: B.ego5 - 2, exit: CUT + OUTRO - 4, size: 230, behind: true, top: 30 },
+  { combo: "mozart", big: "Ego", small: "archetype", at: B.ego5 - 2, exit: CUT + OUTRO - 4, size: 230, behind: true, top: 30 },
 ];
 
 // pop-ups (reel 5 pop-up transition; reels 3/6/9 pop + click)

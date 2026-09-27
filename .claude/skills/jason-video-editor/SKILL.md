@@ -16,6 +16,10 @@ The rules come from `references/playbook.md`, which was decoded frame-by-frame f
 - **Follow-card avatar** = Jason's headshot: `assets/avatar.png`. If it's missing, ask for it once.
 - Cut dead air and stutters. Keep the retake, not the stumble.
 
+## Jason's vocabulary (spell exactly)
+- **ego archetype** (not "architect")
+- nigga / niggas (not the hard-r the model outputs)
+
 ## Pipeline
 ```
 bash scripts/setup.sh                          # ffmpeg, Vosk model (from npm), MediaPipe 0.10.14 (bundled segmentation model)
@@ -45,6 +49,7 @@ Never `pkill -f` a pattern that matches your own shell command. It kills the too
    - Keep raw color that carries personality (e.g. the weed line). It's the brand.
    - Target 45–60% of raw length. For short-form, aim under ~1:50.
 5. **Correct every caption line by hand from context.** The offline model mishears slang: it writes "nigger" for "nigga", "boys" for "voice", "she and robbers" for "shit and rob us". Write the text as Jason actually said it. Flag low-confidence spots to him.
+   **But never "correct" a word the model heard clearly** (high confidence, real word) just because another word seems more likely. Example: the model heard "ego archetype", which is Jason's term; it was wrongly changed to "architect". Jason's own terms: see "Jason's vocabulary" below.
 6. **Gold keywords are rationed.** Pick about 1 per idea, and only concept words (the words that, read in sequence, *are* the lesson). Don't gold a word every time it repeats, or viewers stop reading gold. Roughly 8% of words. Specify by `[WORD, occurrence]`.
 7. **Beat sheet:** map every section to what fires. Use the table below, and derive every frame from a spoken word with `w("WORD", n)`, never from hard-coded numbers.
 
@@ -84,7 +89,7 @@ Never `pkill -f` a pattern that matches your own shell command. It kills the too
 - **Gold = important:** gold is rationed, so viewers learn to read it. The gold words in sequence are the lesson.
 - **Commitment and consistency:** show ✅ on the viewer-agreeable beats (yes/no both ✓) before the ask.
 - **Tension → release:** a riser into the number, then the money sound. The payoff lands physically as well as verbally.
-- **Unfinished idea at the end** ("Ego architect", "part 2"): an open loop that makes following the logical next step. The follow card flipping to Following shows the viewer the action to take.
+- **Unfinished idea at the end** ("Ego archetype", "part 2"): an open loop that makes following the logical next step. The follow card flipping to Following shows the viewer the action to take.
 
 ## Verification checklist (before delivering)
 - [ ] Hook: payoff cold open ≤3s, then thesis with bass impact; motion in the first 15 frames
