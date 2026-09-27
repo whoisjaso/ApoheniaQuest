@@ -30,4 +30,4 @@ Every delivered video gets an entry: Jason's score, what he called out, what's l
 
 **Next iteration protocol:** Jason will send examples (edits, captions, cues, SFX). For each: decode it (frames at 15fps, labels, audio), add the rule to `playbook.md` with its source, apply it on the next video, then log the new score here.
 
-**Open question for Jason (from reel 10):** add sentiment colors on top of the locked yellow? Green for money/wins, red for problems/pain, with yellow staying the default keyword color.
+**DECIDED 2026-09-27 (Jason: yes):** keyword color = meaning. Yellow is the default, green = money/wins, red = problems/pain. It's layered on the locked yellow two-tier style. Applies from episode #2.

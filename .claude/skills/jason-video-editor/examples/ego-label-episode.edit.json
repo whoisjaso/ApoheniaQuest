@@ -271,119 +271,148 @@
  "keys": [
   [
    "SEVEN",
-   1
+   1,
+   "green"
   ],
   [
    "THOUSAND",
-   1
+   1,
+   "green"
   ],
   [
    "PROCEED",
-   1
+   1,
+   "green"
   ],
   [
    "MANIPULATE",
-   1
+   1,
+   "gold"
   ],
   [
    "GAME",
-   1
+   1,
+   "green"
   ],
   [
    "LABEL",
-   1
+   1,
+   "gold"
   ],
   [
    "EGO",
-   1
+   1,
+   "gold"
   ],
   [
    "PERCEIVE",
-   1
+   1,
+   "gold"
   ],
   [
    "ASSUMPTION",
-   1
+   1,
+   "red"
   ],
   [
    "CORPORATE",
-   1
+   1,
+   "gold"
   ],
   [
    "AGAINST",
-   1
+   1,
+   "red"
   ],
   [
    "DECISION",
-   1
+   1,
+   "red"
   ],
   [
    "GLAD",
-   1
+   1,
+   "gold"
   ],
   [
    "NO",
-   1
+   1,
+   "red"
   ],
   [
    "YES",
-   1
+   1,
+   "green"
   ],
   [
    "WON",
-   1
+   1,
+   "green"
   ],
   [
    "TYPE",
-   1
+   1,
+   "gold"
   ],
   [
    "SEVEN",
-   2
+   2,
+   "green"
   ],
   [
    "DOLLARS",
-   2
+   2,
+   "green"
   ],
   [
    "PROCEED",
-   2
+   2,
+   "green"
   ],
   [
    "FAST",
-   1
+   1,
+   "green"
   ],
   [
    "LABELED",
-   1
+   1,
+   "green"
   ],
   [
    "CONFIRMED",
-   1
+   1,
+   "green"
   ],
   [
    "YES",
-   2
+   2,
+   "green"
   ],
   [
    "IDENTITY",
-   1
+   1,
+   "gold"
   ],
   [
    "WEED",
-   1
+   1,
+   "gold"
   ],
   [
    "UNDERLYING",
-   1
+   1,
+   "gold"
   ],
   [
    "EGO",
-   4
+   4,
+   "gold"
   ],
   [
    "ARCHETYPE",
-   1
+   1,
+   "gold"
   ]
  ],
  "curse": [

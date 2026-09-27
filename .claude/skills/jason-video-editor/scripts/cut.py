@@ -4,7 +4,7 @@ edit.json = {
   "source": "full.mov",                       # joined raw footage
   "keep": [[a, b, "corrected caption text", "section-tag"], ...],   # in playback order; a cold-open may reuse later seconds
   "slow": [[s, e], ...],                      # curse words → 0.5x + octave pitch drop (source seconds)
-  "keys": [["WORD", occurrence], ...],        # gold two-tier keywords (occurrence counted in playback order)
+  "keys": [["WORD", occurrence, "gold|green|red"], ...],  # two-tier keywords; tone optional (default gold)
   "curse": ["fuck", "fucking", "bullshit"]
 }
 Outputs in workdir: cut.mp4 (1080x1920 30fps), edl.json, captions.json  → copy into template public/ep + src/ep."""
@@ -56,8 +56,9 @@ for ki, (a, b, txt, tag) in enumerate(KEEP):
         s = min(max(st[i], a), b - 0.01); e = st[i + 1] if i + 1 < len(cw) else b
         caps.append({"k": ki, "t": c.upper(), "f0": round(mapt(s, ki)), "f1": round(mapt(min(max(e, s + 0.05), b), ki)), "tag": tag,
                      "curse": norm(c) in CURSE and any(ss - 0.05 <= s <= ee for ss, ee in SLOWW), "emph": False, "end": i == len(cw) - 1})
-keys = {(w.upper(), n) for w, n in spec.get("keys", [])}; seen = {}
+keys = {(k[0].upper(), k[1]): (k[2] if len(k) > 2 else "gold") for k in spec.get("keys", [])}; seen = {}
 for x in caps:
-    k = re.sub(r"[^A-Z0-9]", "", x["t"]); seen[k] = seen.get(k, 0) + 1; x["emph"] = (k, seen[k]) in keys
+    k = re.sub(r"[^A-Z0-9]", "", x["t"]); seen[k] = seen.get(k, 0) + 1
+    x["emph"] = (k, seen[k]) in keys; x["tone"] = keys.get((k, seen[k]), "gold")
 json.dump(caps, open(f"{wd}/captions.json", "w"))
 print(f"cut: {f} frames ({f/30:.1f}s), {len(pieces)} pieces, {len(caps)} caption words, {sum(c['emph'] for c in caps)} gold keys")

@@ -83,6 +83,7 @@ Never `pkill -f` a pattern that matches your own shell command. It kills the too
 - **Music-led recap** (travel, lifestyle, cars, team): §15. Beat-synced kinetic lyric type, film burns, a grade, editorial corner labels. Grades and light leaks are allowed **only** in this mode.
 
 ## Visual system
+- **Keyword color = meaning (LOCKED, Jason approved 2026-09-27):** yellow `#FFD24A` is the default keyword; **green `#2BE37A` = money, wins, gains, solutions, yes** ($7,000, won, confirmed, fast); **red `#FF3B3B` = problems, pain, threats, no** (against, complaining, problems). Tag each key in edit.json: `["WORD", n, "green"]`. Numbers about money are always green. Never color a word just to decorate it; if it's neither a win nor a problem, it stays yellow.
 - **Captions** (reels 2/3/5/7): Montserrat. Two-tier: small white lowercase setup words, then the gold (#FFD24A) UPPERCASE keyword on its own line. Glow on all text, no heavy stroke. 1–3 words per page, word-by-word, placed on the chest (~y 1070 of 1920).
 - **Font combos** (reel 8): Mozart = luxury/cinematic, Sugary = elegant, Tempting = lifestyle, Modern = business/tech.
   - Only on significant lines, about one per 5–8s.

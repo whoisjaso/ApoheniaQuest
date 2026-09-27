@@ -1,6 +1,6 @@
 import caps from "./captions.json";
 import edl from "./edl.json";
-export type Cap = { k: number; t: string; f0: number; f1: number; emph: boolean; curse: boolean; tag: string; end: boolean };
+export type Cap = { k: number; t: string; f0: number; f1: number; emph: boolean; curse: boolean; tag: string; end: boolean; tone?: "gold" | "green" | "red" };
 export type Piece = { a: number; b: number; speed: number; tag: string; f0: number; f1: number };
 export const CAPS = caps as Cap[];
 export const EDL = edl as Piece[];

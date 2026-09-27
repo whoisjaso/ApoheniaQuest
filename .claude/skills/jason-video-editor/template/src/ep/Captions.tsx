@@ -12,6 +12,8 @@ import { Cap, CAPS, CUT } from "./timeline";
  *  - reel 7: auto captions word-by-word to keep people engaged
  */
 export const GOLD = "#FFD24A";
+/** keyword tone (locked yellow default; green = money/wins, red = problems/pain) */
+export const TONE = { gold: GOLD, green: "#2BE37A", red: "#FF3B3B" } as const;
 type Page = { words: Cap[]; from: number; to: number };
 export const PAGES: Page[] = (() => {
   const pages: Page[] = [];
@@ -35,13 +37,14 @@ export const PAGES: Page[] = (() => {
 const clean = (t: string) => t.replace(/^['"]+|['"]+$/g, "");
 
 const Word: React.FC<{ c: Cap; key2: boolean }> = ({ c, key2 }) => {
+  const kc = TONE[(c.tone ?? "gold") as keyof typeof TONE] ?? GOLD;
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const p = spring({ frame: frame - c.f0 + 1, fps, config: theme.spring.snappy });
   if (frame < c.f0 - 1) return null;
   const style: React.CSSProperties = key2
-    ? { fontSize: 118, fontWeight: 900, color: GOLD, textTransform: "uppercase", letterSpacing: "-0.01em",
-        textShadow: `0 6px 16px rgba(0,0,0,0.55), 0 0 30px ${GOLD}88` }
+    ? { fontSize: 118, fontWeight: 900, color: kc, textTransform: "uppercase", letterSpacing: "-0.01em",
+        textShadow: `0 6px 16px rgba(0,0,0,0.55), 0 0 30px ${kc}88` }
     : { fontSize: 62, fontWeight: 800, color: "#fff", textTransform: "lowercase",
         textShadow: "0 4px 12px rgba(0,0,0,0.6), 0 0 22px rgba(255,255,255,0.45)" };
   return (
