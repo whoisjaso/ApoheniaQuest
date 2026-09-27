@@ -23,9 +23,11 @@ Every delivered video gets an entry: Jason's score, what he called out, what's l
 **Why it's 7.7 and not 10 (backlog to close):**
 1. The SFX are synthesized stand-ins. Swap in his exact CapCut sounds (names are in the playbook) as soon as he exports them.
 2. Transcription uses the small offline model, so some captions were hand-guessed. Push for Whisper (the HuggingFace network allowance).
-3. Visual layer is only captions, combos and pop-ups. No B-roll, images or screen visuals yet. Ask Jason for example edits of the "B-roll/visual" layer he wants.
+3. Visual layer is only captions, combos and pop-ups. No B-roll, images or screen visuals yet. **Spec now exists (playbook §10):** recreated tool UIs with typed prompts, staggered result cards, green counters, brand-logo stickers, split screens, and face↔B-roll every 3–6s.
 4. Text-behind edges are soft (256px matte). Fine on the hat; weak on hair or hands.
 5. A camera shutter on every jump cut may be too much at 40+ cuts. Confirm with Jason or with a reference example.
 6. The pop-up look is one style. Build variety from his future examples.
 
 **Next iteration protocol:** Jason will send examples (edits, captions, cues, SFX). For each: decode it (frames at 15fps, labels, audio), add the rule to `playbook.md` with its source, apply it on the next video, then log the new score here.
+
+**Open question for Jason (from reel 10):** add sentiment colors on top of the locked yellow? Green for money/wins, red for problems/pain, with yellow staying the default keyword color.

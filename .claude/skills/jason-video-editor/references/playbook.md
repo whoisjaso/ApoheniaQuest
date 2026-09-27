@@ -166,3 +166,56 @@ Input: raw footage + mode (talking head / motivational / storytelling / motion g
 4. Tags → SFX (section 3) placed by rule; transitions paired by material (section 1).
 5. Hook in the first 1.5s, keyword-only emphasis, glow on hero text, rounded+shadow on every image, zoom punches on key lines, pop-in transitions for every element; end with comment-keyword or animated-follow CTA.
 6. Render → frame-check → ship.
+
+
+---
+
+## 10. The visual layer, step-by-step AI/business format (reel 10 · "$1M only using ChatGPT")
+This is Jason's lane (AI + business). The reel is voice-led with **almost no SFX** (the spectrogram is nearly all voice). The *visuals* carry the retention.
+
+**Hook**
+- Question with stakes: "If you had to make **$1,000,000** only using ChatGPT's Astra, **how would you do it?**"
+- The number is a **green rolling counter** in the caption, counting up ($111,111 → $888,889 → $1,000,000) in sync with the words.
+- The hook is shot in a **different, more cinematic setup** (other lighting and background), then cuts to the main podcast setup. The visual change signals "a new chapter starts".
+
+**Captions**
+- 1–2 short lines, bold rounded sans (Poppins/Montserrat ExtraBold), white with a soft shadow, centered just under the face.
+- Two-tier: small setup word, then the big keyword under it.
+- **Keyword color = sentiment:**
+  - **green** = money, gains, solutions ("$50,000 a month", "fixes", "the people");
+  - **red** = problems and pain ("all the problems", "complaining", "steal their hooks");
+  - white otherwise.
+- Every number is green and counts up.
+- Step markers inside the caption: "first step", "Step **2**" with a big numeral.
+
+**Brand stickers**
+- When a product is named ("ChatGPT"), its logo pops in as 2–3 tilted, glossy app-icon tiles flanking the word.
+- Pop-in with overshoot; they leave with the phrase.
+
+**Full-screen B-roll takeovers (the "how")**
+- Every process step cuts away from the face to a **recreated UI**: the ChatGPT prompt box **typing the exact prompt** he says, on a dark background with a faint giant brand-logo watermark and drifting particles.
+- **Result cards pop in, staggered** around the prompt: app icons 1-by-1, white rounded revenue cards with line charts ($54,213…), 2-star review cards.
+- A **big green counter** sits in the middle of the cards ($23,077 → $42,308 → "$50,000 a month").
+- Captions keep running over the B-roll, centered.
+- **Evidence B-roll:** real examples whenever he references them (viral TikToks, the competitor app on a laptop screen).
+- **Split screen:** a screenshot or tool UI on the top half, the speaker on the bottom half ("put them into ChatGPT → make me 30 scripts").
+- Cadence: face → B-roll → face roughly every 3–6s. The face comes back for opinions and emotion; B-roll is for facts and steps.
+
+**CTA:** "Comment the word TIKTOK and I'll DM it to you" (keyword lead capture).
+
+## 11. Scene transitions, cinematic vlog (reel 11 · "Top 5 transitions")
+Use these when the **location or scene changes** (not on jump cuts inside one take):
+
+| Transition | What it is | Build |
+|---|---|---|
+| **Film Burn** | an orange/amber light leak burns across the frame and hides the cut | animated radial gradient, screen blend, 10–14f |
+| **Mask Glitch** | an object (pole, person, wall) passes the lens; the cut hides behind it | masked wipe along the object edge |
+| **Camera Flash** | a white flash on the cut | 3–5f white hold, fast fade |
+| **Blackout** | a hand covers the lens → cut to black → the new scene opens from black | hand-to-lens in shot A, reveal in shot B |
+| **Whip Pan** | a fast camera swipe with motion blur, continued into the next shot | directional blur plus 1500px slide, 6–8f |
+
+Look (confirms reel 7 masking):
+- The hook title "TRANSITIONS" is a **huge red serif word behind the speaker**, with a small "top five" kicker.
+- Chapter titles ("1. Film Burn") are red serif at the top.
+- Subtitles are small yellow serif in a dark box at the bottom (documentary style).
+- These videos are shot **by** the creator (handheld, moving). The transitions have to be performed while filming, so this is advice for Jason's shoots, not something added only in post.
