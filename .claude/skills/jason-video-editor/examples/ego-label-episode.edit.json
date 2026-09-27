@@ -1,0 +1,395 @@
+{
+ "source": "full.mov",
+ "keep": [
+  [
+   131.82,
+   133.77,
+   "It's seven thousand dollars. How would you like to proceed?",
+   "cold"
+  ],
+  [
+   12.08,
+   15.72,
+   "I'm going to teach y'all niggas how to manipulate niggas and so on, give y'all",
+   "hook"
+  ],
+  [
+   16.55,
+   17.15,
+   "some game.",
+   "hook"
+  ],
+  [
+   18.5,
+   19.85,
+   "You want to label people.",
+   "label"
+  ],
+  [
+   23.6,
+   27.75,
+   "We have a thing called ego. An ego is how you think other people perceive you,",
+   "ego"
+  ],
+  [
+   28.88,
+   30.15,
+   "it's an assumption.",
+   "ego"
+  ],
+  [
+   30.48,
+   33.6,
+   "For example, if you're putting on your white corporate voice,",
+   "corp"
+  ],
+  [
+   34.43,
+   36.36,
+   "you Black niggas know the fuck I'm talking about.",
+   "corp"
+  ],
+  [
+   36.9,
+   44.37,
+   "You're putting on that white corporate voice because you don't want your employer, or you don't want your colleagues to be like 'oh, he's a fucking nigga,",
+   "corp"
+  ],
+  [
+   45.12,
+   47.34,
+   "he's gonna fucking steal our shit and rob us.'",
+   "corp"
+  ],
+  [
+   48.95,
+   50.45,
+   "So because you have",
+   "use"
+  ],
+  [
+   60.18,
+   61.2,
+   "an assumption",
+   "use"
+  ],
+  [
+   61.77,
+   64.88,
+   "on the way they perceive you, you change the way you act,",
+   "use"
+  ],
+  [
+   67.08,
+   68.3,
+   "and you can use that against 'em.",
+   "use"
+  ],
+  [
+   72.3,
+   74.61,
+   "If I'm trying to get you to make a decision,",
+   "play"
+  ],
+  [
+   78.55,
+   79.4,
+   "I want you to",
+   "play"
+  ],
+  [
+   79.95,
+   83.02,
+   "step into a person that makes a decision.",
+   "play"
+  ],
+  [
+   83.0,
+   84.2,
+   "Watch what I say, I'll be like:",
+   "play"
+  ],
+  [
+   91.28,
+   96.87,
+   "'I'm so glad you're not like all those other people that whenever they're confronted with a decision",
+   "script"
+  ],
+  [
+   97.32,
+   97.86,
+   "they don't",
+   "script"
+  ],
+  [
+   99.33,
+   102.42,
+   "quickly make the decision, even though they know it's beneficial for them.",
+   "script"
+  ],
+  [
+   104.4,
+   105.84,
+   "Have you always been like this?'",
+   "script"
+  ],
+  [
+   108.3,
+   110.1,
+   "And once this nigga says",
+   "won"
+  ],
+  [
+   111.54,
+   113.03,
+   "'no' or 'yes',",
+   "won"
+  ],
+  [
+   115.17,
+   116.28,
+   "you already won.",
+   "won"
+  ],
+  [
+   118.08,
+   122.19,
+   "Because by him saying either of those things, he agrees",
+   "won"
+  ],
+  [
+   122.7,
+   124.5,
+   "that he is that type of person.",
+   "won"
+  ],
+  [
+   125.13,
+   128.22,
+   "So whenever you do present him with a situation like:",
+   "close"
+  ],
+  [
+   129.09,
+   133.77,
+   "'So Mike, after everything we covered, here's the program, it's seven thousand dollars. How would you like to proceed?'",
+   "close"
+  ],
+  [
+   134.7,
+   136.71,
+   "He will feel inclined",
+   "after"
+  ],
+  [
+   137.7,
+   141.87,
+   "to make a fast purchasing decision, because we already",
+   "after"
+  ],
+  [
+   142.86,
+   145.77,
+   "labeled him as a person that does that, and he",
+   "after"
+  ],
+  [
+   146.91,
+   149.58,
+   "confirmed it through saying yes.",
+   "after"
+  ],
+  [
+   171.12,
+   176.73,
+   "I could go down a rabbit hole as to what's the difference between ego and identity,",
+   "deeper"
+  ],
+  [
+   183.15,
+   186.45,
+   "because if you smoke weed, you can laugh and look at people like",
+   "deeper"
+  ],
+  [
+   186.84,
+   187.89,
+   "'I know why he said that.'",
+   "deeper"
+  ],
+  [
+   197.04,
+   199.98,
+   "Everyone has a message, but they have an underlying message.",
+   "deeper"
+  ],
+  [
+   200.88,
+   202.5,
+   "And that underlying message",
+   "deeper"
+  ],
+  [
+   203.13,
+   204.6,
+   "is rooted in their",
+   "deeper"
+  ],
+  [
+   205.02,
+   205.47,
+   "ego,",
+   "deeper"
+  ],
+  [
+   205.95,
+   207.57,
+   "or what I call the ego architect.",
+   "architect"
+  ],
+  [
+   207.63,
+   209.64,
+   "I can go into this whole entire bullshit",
+   "end"
+  ]
+ ],
+ "slow": [
+  [
+   35.4,
+   35.7
+  ],
+  [
+   45.48,
+   45.81
+  ],
+  [
+   209.16,
+   209.61
+  ]
+ ],
+ "keys": [
+  [
+   "SEVEN",
+   1
+  ],
+  [
+   "THOUSAND",
+   1
+  ],
+  [
+   "PROCEED",
+   1
+  ],
+  [
+   "MANIPULATE",
+   1
+  ],
+  [
+   "GAME",
+   1
+  ],
+  [
+   "LABEL",
+   1
+  ],
+  [
+   "EGO",
+   1
+  ],
+  [
+   "PERCEIVE",
+   1
+  ],
+  [
+   "ASSUMPTION",
+   1
+  ],
+  [
+   "CORPORATE",
+   1
+  ],
+  [
+   "AGAINST",
+   1
+  ],
+  [
+   "DECISION",
+   1
+  ],
+  [
+   "GLAD",
+   1
+  ],
+  [
+   "NO",
+   1
+  ],
+  [
+   "YES",
+   1
+  ],
+  [
+   "WON",
+   1
+  ],
+  [
+   "TYPE",
+   1
+  ],
+  [
+   "SEVEN",
+   2
+  ],
+  [
+   "DOLLARS",
+   2
+  ],
+  [
+   "PROCEED",
+   2
+  ],
+  [
+   "FAST",
+   1
+  ],
+  [
+   "LABELED",
+   1
+  ],
+  [
+   "CONFIRMED",
+   1
+  ],
+  [
+   "YES",
+   2
+  ],
+  [
+   "IDENTITY",
+   1
+  ],
+  [
+   "WEED",
+   1
+  ],
+  [
+   "UNDERLYING",
+   1
+  ],
+  [
+   "EGO",
+   4
+  ],
+  [
+   "ARCHITECT",
+   1
+  ]
+ ],
+ "curse": [
+  "fuck",
+  "fucking",
+  "bullshit",
+  "shit"
+ ]
+}
