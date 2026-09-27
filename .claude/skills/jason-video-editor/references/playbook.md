@@ -257,3 +257,25 @@ The job for each sound is **inferred from its name** until a reference video sho
 | **Gears** | "systems", "building", "engine", "automation" |
 | **Switch** | a toggle or state change on screen |
 | **Zap** | a quick electric accent on a fast pop |
+
+
+## 14. Illustrated concept cutaways, podcast-clip polish (reel 14 · MrBeast clip, before/after)
+A showcase from an editor ("Comment EDIT"). The **After** version adds:
+- **Illustrated metaphor cutaways**: when the speaker names an abstract idea, cut to a warm, paper-textured still-life that *pictures* it:
+  - "idea / ideation" → a glowing lightbulb over a brain, with a sticky note ("✓ concept ✓ story ✓ style");
+  - "planning / scripting" → clipped storyboard sketches;
+  - "working on the idea" → a big lightbulb.
+  - Each holds 1–2s with a slow push-in and **camera shake / focus pull**, then back to the face.
+- **Caption style**: small white setup text + a **glowing yellow keyword** ("on videos", "filming", "Ed ting") at the bottom. Same two-tier system as Jason's locked style, so the choice is confirmed.
+- **Depth**: shallow-focus blur on the face shots, plus a warm light-leak/film-burn wipe into the payoff ("$1.5 million a video").
+- **Numbers**: the big money line gets a glow and holds.
+- Rule: **abstract word → concrete picture.** Every concept that has no footage gets an illustrated cutaway, the same as the B-roll rule in §10 but for ideas instead of tools.
+
+## 15. Cinematic music-video / travel recap typography (reel 15 · "Reverin Team Retreat 2.0", landscape)
+- **Kinetic lyric typography**: the song lyric appears as huge condensed red display type (Anton/Bebas-style), **synced to the beat, word by word**, often **behind** the subject ("CODE RED" with waves crashing through it) or masked by the scene.
+- **Mixed type per phrase**: condensed caps for punches ("AM I DREAMING", "BORN BRED", "MOSTEST"), a clean sans for flowing lines ("focused, all range of toast is").
+- **Editorial frame**: small red corner labels (creator name, studio, "GOA TRIP", "TEAM RETREAT") and a thin film border on some shots. This is a *magazine / brand* look.
+- **Grade**: warm golden-hour teal-orange, film-burn light leaks as transitions, and a black-and-white section for contrast.
+- **Cuts on the beat** of the track; speed ramps on action.
+- **Title outro**: a glitching condensed title card ("REVERIN TEAM RETREAT 2.0").
+- **When Jason would use it**: lifestyle, travel, team, car and luxury recaps with a song instead of a voice. It's a separate "music-led recap" mode (not talking head). Here, grades and film burns *are* the style, so they're allowed.

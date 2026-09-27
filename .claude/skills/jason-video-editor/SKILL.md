@@ -77,6 +77,11 @@ Never `pkill -f` a pattern that matches your own shell command. It kills the too
 - A long-lived title must **clear before a punchline caption** (e.g. the slow-mo curse). If it belongs on the outro, add it again there.
 - Check: in every still, one piece of text says one thing once.
 
+## Modes (pick one per video before editing)
+- **Talking head / teaching** (default, episode #1): everything below.
+- **AI / business how-to**: + recreated tool UIs and result cards (§10), UI/tech SFX (§13), illustrated concept cutaways (§14).
+- **Music-led recap** (travel, lifestyle, cars, team): §15. Beat-synced kinetic lyric type, film burns, a grade, editorial corner labels. Grades and light leaks are allowed **only** in this mode.
+
 ## Visual system
 - **Captions** (reels 2/3/5/7): Montserrat. Two-tier: small white lowercase setup words, then the gold (#FFD24A) UPPERCASE keyword on its own line. Glow on all text, no heavy stroke. 1–3 words per page, word-by-word, placed on the chest (~y 1070 of 1920).
 - **Font combos** (reel 8): Mozart = luxury/cinematic, Sugary = elegant, Tempting = lifestyle, Modern = business/tech.
