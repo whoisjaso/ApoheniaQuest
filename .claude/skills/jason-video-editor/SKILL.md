@@ -69,6 +69,12 @@ Never `pkill -f` a pattern that matches your own shell command. It kills the too
 | Curse punchline | 0.5x slow-mo + push-in, yellow keyword caption | whoosh (it's a zoom) | Jason's rule |
 | End | the idea's title combo (text-behind), freeze-blur, **animated follow card**: avatar + "FOLLOW FOR MORE" + button flips Follow → ✓ Following | **Bell ding** on the flip | reels 5/9 |
 
+## Never show the same words twice (Jason's rule)
+- **Font combo on screen → no captions.** Captions are fully hidden for the combo's window. A combo lives exactly as long as its phrase: from its keyword to the phrase's closing punctuation, 45-frame minimum so it reads (`phraseEnd()` + `hold()`), then captions resume.
+- **Pop-up on screen → hide only the caption pages that repeat its words.** Match content words and ignore filler ("the, you, that…"). "$7,000" also matches spoken "seven thousand dollars". Keep an `OVERLAYS` list (from, to, text) that mirrors every pop-up, and pass it as `dedupe`.
+- A long-lived title must **clear before a punchline caption** (e.g. the slow-mo curse). If it belongs on the outro, add it again there.
+- Check: in every still, one piece of text says one thing once.
+
 ## Visual system
 - **Captions** (reels 2/3/5/7): Montserrat. Two-tier: small white lowercase setup words, then the gold (#FFD24A) UPPERCASE keyword on its own line. Glow on all text, no heavy stroke. 1–3 words per page, word-by-word, placed on the chest (~y 1070 of 1920).
 - **Font combos** (reel 8): Mozart = luxury/cinematic, Sugary = elegant, Tempting = lifestyle, Modern = business/tech.
@@ -98,6 +104,7 @@ Never `pkill -f` a pattern that matches your own shell command. It kills the too
 - [ ] Gold ≤ ~1 per idea; curse slow-mos only on punchline curses
 - [ ] Every zoom → whoosh, every cut → zoom transition + shutter, every pop-up → pop + click, reveals → riser/reveal, money → money, CTA flip → bell
 - [ ] Text-behind moments readable (head clips ≤30%)
+- [ ] No duplicated text: captions hidden under combos, and caption pages repeating a pop-up hidden
 - [ ] Nothing from the "Do not add" list; no invented text
 - [ ] Stills checked at every beat; the final encode checked (duration, 1080x1920, loudness peak ≤ 0 dB)
 - [ ] Deliver: MP4 (<30MB for chat), music recommendation from the playbook, list of any uncertain caption words

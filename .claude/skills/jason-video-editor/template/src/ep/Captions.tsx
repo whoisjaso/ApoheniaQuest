@@ -51,11 +51,19 @@ const Word: React.FC<{ c: Cap; key2: boolean }> = ({ c, key2 }) => {
   );
 };
 
-export const Captions: React.FC<{ hide: [number, number][] }> = ({ hide }) => {
+const STOP = new Set(["THE", "AND", "YOU", "THAT", "THIS", "WITH", "FOR", "ARE", "HOW", "WHAT", "HAVE", "WOULD", "LIKE", "YOUR", "THEY", "THEM", "HIM", "HIS", "OF", "TO", "A", "AN", "IS", "IT", "IN", "ON"]);
+const words = (t: string) => t.toUpperCase().split(/\s+/).map((w) => w.replace(/[^A-Z0-9$]/g, "")).filter((w) => w.length > 1 && !STOP.has(w));
+export type Overlay = { from: number; to: number; text: string };
+
+/** Never show the same words twice: `hide` = windows with no captions at all (font combos);
+ *  `dedupe` = on-screen text — a caption page is hidden while an overlay shows any of its words. */
+export const Captions: React.FC<{ hide: [number, number][]; dedupe?: Overlay[] }> = ({ hide, dedupe = [] }) => {
   const frame = useCurrentFrame();
   if (hide.some(([a, b]) => frame >= a && frame < b)) return null;
   const page = PAGES.find((p) => frame >= p.from - 1 && frame < p.to);
   if (!page) return null;
+  const pw = new Set(page.words.flatMap((x) => words(x.t)));
+  if (dedupe.some((o) => frame >= o.from - 1 && frame <= o.to && words(o.text).some((w) => pw.has(w) || (w === "$7000" && (pw.has("SEVEN") || pw.has("THOUSAND") || pw.has("DOLLARS")))))) return null;
   const exit = interpolate(frame, [page.to - 4, page.to], [1, 0], { ...clamp, easing: theme.ease.in });
   const keys = page.words.filter((x) => x.emph || x.curse);
   const setup = page.words.filter((x) => !(x.emph || x.curse));
