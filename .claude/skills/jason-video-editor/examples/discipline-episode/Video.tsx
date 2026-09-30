@@ -22,7 +22,9 @@ export const Video: React.FC<{ punches: number[]; behind?: React.ReactNode; fgRa
   if (piece) {
     z += interpolate(frame, [piece.f0, piece.f1], [0, 0.035], { ...clamp, easing: theme.ease.inOut }); // keyframed drift
     const t = frame - piece.f0;
-    if (idx > 0 && t < TRANSITION) {
+    const section = idx > 0 && EDL[idx - 1].tag !== piece.tag;
+    if (!section && piece.speed === 1) z += (idx % 2) * 0.045; // same-thought jump cut: alternate framing, no effect
+    if (section && t < TRANSITION) {
       z += interpolate(t, [0, TRANSITION], [0.14, 0], { ...clamp, easing: theme.ease.out }); // zoom transition in
       blur = interpolate(t, [0, TRANSITION], [10, 0], { ...clamp, easing: theme.ease.out });
     }
@@ -49,7 +51,7 @@ export const Video: React.FC<{ punches: number[]; behind?: React.ReactNode; fgRa
       {behind}
       {!outro && fgRanges.map(([a, b]) => (
         <Sequence key={a} from={a} durationInFrames={b - a} layout="none">
-          <AbsoluteFill><OffthreadVideo src={staticFile("ep3/fg.webm")} transparent muted trimBefore={a} style={style} /></AbsoluteFill>
+          <AbsoluteFill><OffthreadVideo src={staticFile("ep3/fg_v2.webm")} transparent muted trimBefore={a} style={style} /></AbsoluteFill>
         </Sequence>
       ))}
     </AbsoluteFill>

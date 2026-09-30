@@ -133,3 +133,11 @@ When Jason sends more reference videos: md5-check for duplicates first. Then con
 - The Vosk small model is weaker than Whisper. HuggingFace is blocked in the cloud env; if it's ever allowed, switch transcription to Whisper for cleaner captions.
 - MediaPipe selfie segmentation is ~256px internally, so edges are soft. That's fine for text behind the head, not for fine hair detail.
 - Screen-recording "auto-zoom / cursor-follow" animations (the Screen Studio-style look Jason likes): build them in Remotion with keyframed zoom to click points when screen footage is provided.
+
+## Rules from episode #2 feedback (7/10)
+- **Coherence over chop:** keep whole sentences.
+  - Trim only pauses over 0.55s and real flubs.
+  - Transitions and shutter sounds only on section changes; same-thought jump cuts are silent and effect-free.
+- **Captions always move:** word pop with overshoot and rotation, active-word lift, keyword slam with shake and glow, line float, blur exit.
+- **Real iOS sounds only (1:1):** use `assets/sfx/ios/`, never a synthesized chime.
+- **Hook:** open on his cleanest, boldest line, untouched.

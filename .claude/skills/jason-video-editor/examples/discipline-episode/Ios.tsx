@@ -23,10 +23,11 @@ export const ImageCard: React.FC<{ src: string; from: number; to: number; shade?
   const f = useCurrentFrame();
   if (f < from || f >= to) return null;
   const t = f - from;
-  const z = interpolate(f, [from, to], [1.0, 1.07], clamp) + interpolate(t, [0, 7], [0.12, 0], { ...clamp, easing: theme.ease.out });
-  const blur = interpolate(t, [0, 7], [14, 0], { ...clamp, easing: theme.ease.out });
+  const z = interpolate(f, [from, to], [1.02, 1.08], clamp);
+  const blur = interpolate(t, [0, 8], [6, 0], { ...clamp, easing: theme.ease.out });
+  const fade = Math.min(interpolate(t, [0, 8], [0, 1], { ...clamp, easing: theme.ease.out }), interpolate(f, [to - 6, to], [1, 0], { ...clamp, easing: theme.ease.in }));
   return (
-    <AbsoluteFill style={{ background: "#000", overflow: "hidden" }}>
+    <AbsoluteFill style={{ background: "#000", overflow: "hidden", opacity: fade }}>
       <Img src={staticFile(src)} style={{ width: "100%", height: "100%", objectFit: "cover", transform: `scale(${z})`, filter: `saturate(0.88) contrast(1.05) blur(${blur}px)` }} />
       {shade === "bottom" && <AbsoluteFill style={{ background: "linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0) 30%)" }} />}
       {shade === "top" && <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 35%)" }} />}

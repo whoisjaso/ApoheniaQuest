@@ -60,3 +60,21 @@ Every delivered video gets an entry: Jason's score, what he called out, what's l
   - Caption position follows the image card's reserved text zone (the `tops` prop).
 - **Code:** `examples/discipline-episode/`.
 - **Score:** pending Jason.
+
+### Episode #2 v1 score: **7/10** (Jason). His notes are now rules:
+1. **Captions need more motion.**
+   - Every word pops with overshoot and a slight rotation, and blurs in.
+   - The spoken word lifts; keywords slam in from 2× with a shake and a glow pulse.
+   - The line floats gently and exits upward with a blur.
+2. **iOS sounds must be 1:1 real.**
+   - Never synthesize. Use Apple's own system sounds (`assets/sfx/ios/`): Tri-tone (sms-received1) for notifications, iMessage received, Tink (toggle), Activity goal attained (rings), Apple Pay success.
+   - Source: github extratone/iOSSystemSounds and macOSsystemsounds. Git clone works where websites are blocked.
+3. **Too many cuts hurt coherency. Cleaner is better.**
+   - Keep whole sentences.
+   - Only trim pauses over 0.55s (down to 0.3s) and cut true flubs or unclear words.
+   - Same-thought jump cuts get no transition and no SFX, just alternating framing.
+   - Zoom transitions and shutter sounds only on section changes.
+   - Image cards crossfade, never hit-zoom.
+4. **Hook = the cleanest, boldest line, as-is.**
+   - This episode opens on "I'm black as fuck, and my dick is big as fuck." (Jason's wording for part 04 ~0:21–22.)
+   - No notification or graphic on the hook when the line carries itself.
