@@ -37,3 +37,26 @@ Every delivered video gets an entry: Jason's score, what he called out, what's l
 - the standard has a **full designed scene per sentence** (image collages, editorial cards, rolling numbers, cinematic B-roll), a **moody grade with one accent**, and **callbacks**.
 - Next edit: plan a beat sheet with one visual per sentence *before* rendering.
 - Needs from Jason: images/B-roll for his nouns (or approval to use stock/AI-generated images, e.g. via Higgsfield), and his logo/brand assets.
+
+## Episode #2: "You ARE disciplined" (Iman Gadzhi × iOS). Cut 2026-09-30
+- **Source:** 5 parts, 4:31 raw → **1:41** cut, 40 keep segments, 5 slow-mo curse punchlines (bitch ×2, bullshit, fuck, nigga, loser).
+- **Confirmed words:** Jason corrected 3 spots the transcription got wrong. Always ask for unclear words before cutting; never guess captions.
+  - "get slutted the fuck out, you stupid bitch"
+  - "created in the image of God"
+  - "because I'm not a bitch and I'm not weak and my dick is big as fuck"
+- **10 in-depth AI images:** all 9+/10 on the first try. The in-depth prompt rule works.
+- **Image color system across the set:**
+  - Gold = the way out: 01, 03, 07, 08, 10.
+  - Red = the trap: 12.
+  - Green = the win: 11, 15.
+- **iOS layer:**
+  - Dynamic-Island notification on the hook.
+  - Collapsing notification stack (newest in front; never stack cards over the face).
+  - Screen Time toggle flip, Fitness rings closing.
+- **Text-behind hero words:** ARE (yellow, behind the hat), AUTHORITY, REDIRECT (green).
+- **Rules learned:**
+  - Hero words on this footage sit at top ≤ 170, where the hat starts at ~340.
+  - 8–9-letter words max out at a Nunito 900 size of ~160–175.
+  - Caption position follows the image card's reserved text zone (the `tops` prop).
+- **Code:** `examples/discipline-episode/`.
+- **Score:** pending Jason.
