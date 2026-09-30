@@ -83,3 +83,16 @@ Every delivered video gets an entry: Jason's score, what he called out, what's l
 - He confirmed "I'm not weak, and my dick is big as fuck." v2 wrongly captioned "I'm black as fuck", from his loose paraphrase of the hook request.
 - **Rule:** captions follow the **confirmed words**. When a new message paraphrases a line that was already confirmed, keep the confirmed wording and flag the difference; never overwrite it.
 - **Rule:** align confirmed words to recognizer mis-hears with an alias map ("week"→weak, "pick"→dick, "biggest"→big as, "work"→fuck). Then spread merged tokens, so no two words pop on the same frame.
+
+## Episode #3 brief ("what to do with your life"). Jason's direction, 2026-09-30
+- **Motion graphics over AI images.** Use designed, animated explainers that *show* what he's saying (v9-style UI/card takeovers, v19-style clean kinetic type), not photo B-roll.
+- **Pauses are part of the delivery.**
+  - His silences are often intentional, for impact. Do NOT auto-trim every gap.
+  - Only cut stutters, restarts and true dead air (roughly >1.5s with no dramatic intent), and even then leave ~0.6–0.8s.
+- **Never drop key words**, and never reorder or break his logic.
+  - The sequence must flow hook → argument → payoff → CTA exactly as he builds it.
+  - The hook is the first line when the first line is already a hook.
+- **iOS notification sounds:** he is bullish on them, so use them generously and 1:1 real.
+- **QA against references before sending.**
+  - Compare the render frame by frame with v9 (motion-graphics talking head), v19 (kinetic iOS type) and v21 (the "My work vs Original" standard).
+  - Fix anything below them first.

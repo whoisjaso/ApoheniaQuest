@@ -141,3 +141,8 @@ When Jason sends more reference videos: md5-check for duplicates first. Then con
 - **Captions always move:** word pop with overshoot and rotation, active-word lift, keyword slam with shake and glow, line float, blur exit.
 - **Real iOS sounds only (1:1):** use `assets/sfx/ios/`, never a synthesized chime.
 - **Hook:** open on his cleanest, boldest line, untouched.
+
+## Rules from episode #3 brief
+- **Motion graphics > AI images** for explaining ideas (animated UI, counters, diagrams, kinetic type).
+- **Respect his pauses:** only cut stutters, restarts and dead air over ~1.5s (leave ~0.7s). Never drop a key word. Never break the logical order: hook → argument → payoff → CTA.
+- **QA gate:** before sending, compare stills side by side with the reference reels (v9, v19, v21) and fix any beat that falls short.
