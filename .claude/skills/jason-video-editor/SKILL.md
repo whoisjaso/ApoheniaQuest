@@ -87,6 +87,7 @@ Never `pkill -f` a pattern that matches your own shell command. It kills the too
 ## Modes (pick one per video before editing)
 - **Talking head / teaching** (default, episode #1): everything below.
 - **AI / business how-to**: + recreated tool UIs and result cards (§10), UI/tech SFX (§13), illustrated concept cutaways (§14).
+- **Iman × iOS** (§20): clean Avenir-style type, smooth spring motion, frosted-glass iOS UI cards as B-roll, glitch transitions, restraint.
 - **Music-led recap** (travel, lifestyle, cars, team): §15. Beat-synced kinetic lyric type, film burns, a grade, editorial corner labels. Grades and light leaks are allowed **only** in this mode.
 
 ## Visual system

@@ -363,3 +363,23 @@ Rules it confirms:
   - Its captions use **red for the negatives** ("to stop", "tension", "a negative") and **yellow for the positives** ("transitions", "captions", "to switch"). This independently confirms Jason's color rule.
   - New rule: **open with a notification sound** (a pattern interrupt the viewer's phone-trained brain reacts to).
 - **Kinetic-typography promo** (sound-pack ad, no footage): white UI world, word-by-word blur-in type, a fake Google search typing "perfect sound effects?", a Drive folder of SFX, a big mascot word "lazy → ambitious". **Screen-UI storytelling for product/offer ads**: use it for Jason's own offers.
+
+
+## 20. Iman Gadzhi × iOS style (Jason's direction for episode #2)
+Jason: "Iman Gadzhi style edits… motion graphics that feel iOS, clean, smooth."
+
+**Iman Gadzhi, sourced** (web, 2026-09: editing tutorials + editor breakdowns):
+- **Avenir** font for text and captions
+- fast cuts, dynamic motion, **text animations**, **cinematic B-roll**, zooms, subtitles, storytelling
+- **glitch transitions**
+- `posterizeTime(2)`-style choppy/stepped motion on some text
+- editor critique of his style: *"sound design, visual storytelling, **no unnecessary effects**"*: restraint is part of the look
+- Not verified from a source (general knowledge; confirm with a reference clip): a dark, cool cinematic grade and luxury/lifestyle B-roll.
+
+**iOS motion language** (matches reel 19 kinetic-type and reel 3/6 UI cards):
+- **Font:** Avenir → free stand-ins **Nunito Sans / Figtree**; SF Pro → **Inter**. Clean, semibold, sentence case.
+- **Springs, not bounces:** a critically damped feel (damping ~26, stiffness ~170, no overshoot) for UI; words **blur-in** (10px → 0) with a slight rise.
+- **Frosted-glass cards:** backdrop blur, 28–32px radius, 1px white-10% border, soft shadow. Notification banners, widgets, sheets.
+- **iOS UI as B-roll:** Dynamic-Island notification pill for the hook ("iPhone notification → stop the scroll", reel 21); Screen Time report, Health/Fitness rings, Calendar events, Notes, bank app. The viewer's phone-trained brain reads them instantly.
+- **Sound:** iOS-style notification, soft taps/clicks, success chime, whoosh. Use the UI packs (§13, §17).
+- Captions stay Jason's locked two-tier yellow/green/red, set in the clean font.
