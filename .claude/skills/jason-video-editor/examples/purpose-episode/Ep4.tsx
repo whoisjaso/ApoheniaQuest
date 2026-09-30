@@ -37,7 +37,7 @@ const A = {
   paradigm: at("doors", "PARADIGM"), script: at("doors", "SCRIPT"), cycle: at("doors", "CYCLE", 1), change: at("doors", "CHANGE"), take: at("doors", "TAKE"), five: at("doors", "FIVE"),
   promise: at("doors", "PROMISE"), somebody: at("doors", "SOMEBODY", 1), that: at("doors", "THAT", 2), doors: at("doors", "DOORS"), changes: at("doors", "CHANGES"),
   neverN: at("never", "NEVER"), still: at("execute", "STILL"), doing1: at("execute", "DOING", 1), doing2: at("execute", "DOING", 2), doing3: at("execute", "DOING", 3),
-  come: at("execute", "COME"), plans: at("execute", "PLANS"), actions: at("execute", "ACTIONS"), execute: at("execute", "EXECUTE"),
+  come: at("execute", "COMMIT"), god: at("execute", "GOD"), plans: at("execute", "PLANS"), actions: at("execute", "ACTIONS"), execute: at("execute", "EXECUTE"),
 };
 const [, hook1] = sec("hook"), [ocean0] = sec("ocean"), [sell0] = sec("sell"), [prob0, prob1] = sec("problem"), [me0] = sec("me"), [, doors1] = sec("doors");
 
@@ -110,6 +110,7 @@ const Sound: React.FC = () => {
       {[A.doing1, A.doing2, A.doing3].map((f) => <Sfx key={`d${f}`} f={f - 1} name={S.pop} v={0.5} />)}
       <Sfx f={A.plans} name={S.tink} v={0.9} />
       <Sfx f={A.actions} name={S.tink} v={0.9} />
+      <Sfx f={A.god - 1} name={S.shine} v={0.5} />
       <Sfx f={A.execute - 1} name={S.cine} v={0.55} />
       <Sfx f={A.execute - 1} name={S.bass} v={0.5} />
       <Sfx f={CUT + 46} name={S.pop} v={0.45} />
@@ -155,7 +156,7 @@ export const Ep4: React.FC = () => (
     <Banner at={A.somebody - 2} until={A.that - 2} logo="imessage" color="#34DA50" logoBg="#34DA50" app="MESSAGES" title="Unknown number" body="Yo, we met on the walk earlier. Let’s link 🤝" />
     <Doors from={A.that - 2} open={A.doors} life={A.changes} to={doors1 + 4} />
     <DoingStack ats={[A.doing1, A.doing2, A.doing3]} to={A.come} />
-    <Execute plans={A.plans} actions={A.actions} exec={A.execute} to={CUT} />
+    <Execute plans={A.plans} actions={A.actions} god={A.god} exec={A.execute} to={CUT} />
     <Captions hide={HIDE} tops={TOPS} />
     <CtaPurpose from={CUT} dm={CUT + 70} to={CUT + OUTRO} />
     <FollowCard flipAt={FLIP} />

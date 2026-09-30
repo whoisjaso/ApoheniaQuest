@@ -505,7 +505,7 @@ export const DoingStack: React.FC<{ ats: number[]; to: number }> = ({ ats, to })
 };
 
 /** plans ✓ actions ✓ → EXECUTE */
-export const Execute: React.FC<{ plans: number; actions: number; exec: number; to: number }> = ({ plans, actions, exec, to }) => {
+export const Execute: React.FC<{ plans: number; actions: number; god: number; exec: number; to: number }> = ({ plans, actions, god, exec, to }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   if (f < plans - 1 || f >= to) return null;
@@ -521,7 +521,7 @@ export const Execute: React.FC<{ plans: number; actions: number; exec: number; t
   };
   return (
     <div style={{ position: "absolute", top: 110, left: 90, right: 90 }}>
-      <div style={{ ...glass, padding: "20px 36px" }}>{row("Plans", plans)}{row("Actions", actions)}</div>
+      <div style={{ ...glass, padding: "20px 36px" }}>{row("Plans", plans)}{row("Actions", actions)}{row("Committed to God", god)}</div>
       {f >= exec - 1 && <div style={{ marginTop: 26, textAlign: "center", fontFamily: "Nunito Sans", fontWeight: 900, fontSize: 170, color: Y, transform: `scale(${interpolate(pe, [0, 1], [2, 1])})`, textShadow: `0 0 60px ${Y}88`, letterSpacing: "-0.03em" }}>EXECUTE</div>}
     </div>
   );

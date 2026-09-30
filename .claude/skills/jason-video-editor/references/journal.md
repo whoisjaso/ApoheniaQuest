@@ -114,3 +114,15 @@ Every delivered video gets an entry: Jason's score, what he called out, what's l
 - **Real brand logos:** from simple-icons (`assets/logos/`), rendered as masks.
 - **Hero words behind the head:** top ≈ 570–610 on this framing (the durag starts ~760).
 - **Ops:** remotion stills bundles copy `public/` into /tmp every run. Delete `/tmp/remotion-webpack-bundle-*` after each run, or the disk allowance fills.
+
+### Episode #3 score: **8.3/10**. NEW HIGH ("probably one of the best you've done so far")
+- **What won it:**
+  - Motion graphics instead of AI images: every sentence visualised with iOS/brand UI.
+  - Clean loud voice (DeepFilterNet3 chain).
+  - His pauses kept, with only dead air trimmed.
+  - Logic intact from hook → CTA.
+  - Real iOS sounds and real brand logos.
+  - Reference QA pass before sending.
+- **Correction:** the closing line is "**Commit all your plans and actions onto God, then execute.**" I had guessed "Come up with…".
+  - **Rule:** faith lines are his signature. When a garbled word could be "God", ask, never guess.
+- **This episode is now the baseline:** the purpose-episode format (`examples/purpose-episode/`) is the default for talking-head motivational content.

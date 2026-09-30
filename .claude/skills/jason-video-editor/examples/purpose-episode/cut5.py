@@ -16,7 +16,7 @@ KEEP = [
  ("p1", 67.63, 89.95, "A lot of people have money saved up. A lot of people, they do so much !research, but they never actually !do. And I'm here to tell y'all niggas, because I was once in that position, right, where I didn't know what I want, wanted to do with my life. I was kind of confused. I was always sitting down and pondering on what are the things that I like, what are the things that I want to do, what am I good at. You have to realize that you", "me"),
  ("p2", 0.0, 54.75, "will never find your purpose by not doing anything. You will never find your purpose by !thinking of your purpose. You will only find your ^purpose by +doing. You just have to do shit, literally anything, bro. Like, you go wake up one day and say, you know what, let me play ^chess every single day, and through that you will find your purpose, like, believe it or not. But if you live the same life, if you repeat the same things you do every single day, the same actions you do every single day, you're not changing shit, because you're living in the same !paradigm, you're living in the same !script, you're living in the same !cycle. Change the fucking ^cycle, my nigga, and it's not hard. If you don't fucking do anything, take a +walk every single day for five minutes, bro. I promise you, you just don't know. You may meet somebody random and just have the spirit to talk to somebody, and that may be the person that gets you into the ^doors you want to get into, that changes your fucking life.", "doors"),
  ("p2", 54.75, 57.58, "But you will never, ever, ever, ever, ever", "never"),
- ("p2", 80.5, 91.45, "you will never find your purpose by being !still. You will always find your purpose by +doing, and doing, and doing. Come up with your plans and actions, and go ^execute.", "execute"),
+ ("p2", 80.5, 91.45, "you will never find your purpose by being !still. You will always find your purpose by +doing, and doing, and doing. Commit all your plans and actions onto ^God, then ^execute.", "execute"),
 ]
 CURSE = {"fuck", "fucking", "shit", "nigga", "niggas"}
 def spans(p, a, b):
@@ -51,7 +51,7 @@ def mapt(t, k):
     return [e for e in edl if e["k"] == k][-1]["f1"]
 norm = lambda s: re.sub(r"[^a-z0-9']", "", s.lower())
 ALIAS = {"yard": "y'all", "out": "a", "psycho": "cycle", "mcnugget": "nigga", "taste": "change", "shape": "shit", "she": "shit", "that": "have",
-         "recession": "service", "pocket": "pocket", "for": "fucking", "comey": "come", "leg": "right"}
+         "recession": "service", "pocket": "pocket", "for": "fucking", "comey": "commit", "are": "all", "got": "god", "leg": "right"}
 TONE = {"!": "red", "+": "green", "^": "gold"}
 caps = []
 for k, (p, a, b, txt, tag) in enumerate(KEEP):
