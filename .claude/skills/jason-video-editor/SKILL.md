@@ -69,6 +69,9 @@ Never `pkill -f` a pattern that matches your own shell command. It kills the too
 | Reveal (surprise, "you already won", hidden word) | combo or pop-up | **Metallic Riser / Magic reveal** → `riser` + `metallic_hit` / `synth_hit` | reels 3/6/9 |
 | Money / numbers | gold pop-up of the number | **Money** → `kaching` | reel 3 |
 | Curse punchline | 0.5x slow-mo + push-in, yellow keyword caption | whoosh (it's a zoom) | Jason's rule |
+| Fast montage (cuts ≤ 8f) | one shot per beat | **shutter click on every cut** (playbook §16) | reels 1/6/9/18 |
+| Title text assembling in chunks | chunk-by-chunk pop | **click per chunk** | reel 18 |
+| Numbers counting up | green counter | **Counter** tick (pack3) | reels 10/17 |
 | End | the idea's title combo (text-behind), freeze-blur, **animated follow card**: avatar + "FOLLOW FOR MORE" + button flips Follow → ✓ Following | **Bell ding** on the flip | reels 5/9 |
 
 ## Never show the same words twice (Jason's rule)

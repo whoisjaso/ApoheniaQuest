@@ -279,3 +279,44 @@ A showcase from an editor ("Comment EDIT"). The **After** version adds:
 - **Cuts on the beat** of the track; speed ramps on action.
 - **Title outro**: a glitching condensed title card ("REVERIN TEAM RETREAT 2.0").
 - **When Jason would use it**: lifestyle, travel, team, car and luxury recaps with a song instead of a voice. It's a separate "music-led recap" mode (not talking head). Here, grades and film burns *are* the style, so they're allowed.
+
+
+## 16. Sound-to-shot map for B-roll montages (reel 18 · "Sound Effects Breakdown", 24 Hours in Vancouver)
+The most useful SFX reference so far: it labels **which sound goes on which visual event** in a real vlog edit.
+
+| Visual event | Sound (his label) | Build |
+|---|---|---|
+| Opening establishing shot (night city pan) | **WHOOSH** | whoosh on the first frame |
+| Title text appears in pieces ("24 / HOURS / IN / VANCOUVER, CA / SHOT ON / OSMO POCKET 3") | **CLICK ×3** | one click per text chunk, ~4–6f apart |
+| Fast cut into a new location (car interior) | **WHOOSH ×2** | a double whoosh on a whip or hard location change |
+| A picture-in-picture box or glitchy black square flickers over the shot | **DATA PROCESSING** | digital chatter for as long as the box is on screen |
+| Camera rotation / tilt reveal | **RATCHET** | ratchet ticks synced to the rotation |
+| A hard cut to an interior detail | **MOUSE CLICK** | a single click on the cut |
+| Rapid 3-cut montage (store racks) | **SHUTTER ×3** | a camera shutter on each cut |
+| Fast montage of stills/signs (1 shot ≈ 4–8f) | **SHUTTER CLICKS** | continuous shutter clicks, one per cut |
+
+Rules it confirms:
+- **Every cut in a fast montage gets a shutter** (now ×5 across reels 1, 6, 9, 18).
+- **Text pieces get clicks**, one per chunk. Headlines that assemble word by word click on each word.
+- **Tech overlays get data-processing chatter** (matches §13 Data Loading).
+- Transitions between locations are **double** whooshes, not single.
+- No music-drop tricks. The sounds sit on top of a steady bed.
+- Title card layout: small "24 HOURS IN" kicker + big "VANCOUVER, CA" left; "SHOT ON / OSMO POCKET 3" right, over the footage.
+
+## 17. More SFX packs (reels 16–17)
+- **"Sounds you need in your next edits"** (12 named, extracted, `assets/sfx/pack3/`):
+  - 8 Bit Talking: retro/robot speech
+  - Old Flash: vintage camera flash
+  - Cinematic Woosh
+  - Night Vision: device power-on
+  - Nextel: chirp/radio beep
+  - Digital Text: text typing on screen
+  - Riser: 5s build
+  - Counter: numbers counting up. Pairs with green money counters.
+  - Bicycle Chain: ratchet ticks
+  - Camera Click
+  - Shine: a sparkle on a reveal or a logo
+  - Woosh
+  - Nextel/Digital Text and Counter/Bicycle Chain overlap in the source, so their edges are approximate.
+- **"Essential SFX for your UI Designs"** (7 unnamed clips on a timeline, `ui_01…ui_07`). No names are shown, so use them only as UI-motion alternatives after listening.
+- Showcase format note: both are "comment SFX" lead magnets again (×4 creators now). Jason's own SFX/fonts giveaway reel would fit the same funnel.

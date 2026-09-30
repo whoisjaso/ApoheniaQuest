@@ -1,0 +1,135 @@
+[
+ {
+  "name": "8bit_talking",
+  "start": 0.08,
+  "end": 2.5,
+  "dur": 2.42,
+  "match": 1.0
+ },
+ {
+  "name": "old_flash",
+  "start": 2.6,
+  "end": 4.0,
+  "dur": 1.4,
+  "match": 1.0
+ },
+ {
+  "name": "cinematic_woosh",
+  "start": 4.05,
+  "end": 5.1,
+  "dur": 1.05,
+  "match": 1.0
+ },
+ {
+  "name": "night_vision",
+  "start": 5.1,
+  "end": 6.55,
+  "dur": 1.45,
+  "match": 0.9889
+ },
+ {
+  "name": "nextel",
+  "start": 6.6,
+  "end": 7.25,
+  "dur": 0.65,
+  "match": 0.9908
+ },
+ {
+  "name": "digital_text",
+  "start": 7.25,
+  "end": 8.95,
+  "dur": 1.7,
+  "match": 0.9996
+ },
+ {
+  "name": "riser",
+  "start": 9.05,
+  "end": 14.05,
+  "dur": 5.0,
+  "match": 1.0
+ },
+ {
+  "name": "counter",
+  "start": 14.05,
+  "end": 14.95,
+  "dur": 0.9,
+  "match": 0.9995
+ },
+ {
+  "name": "bicycle_chain",
+  "start": 15.0,
+  "end": 15.75,
+  "dur": 0.75,
+  "match": 1.0
+ },
+ {
+  "name": "camera_click",
+  "start": 16.25,
+  "end": 17.1,
+  "dur": 0.85,
+  "match": 1.0
+ },
+ {
+  "name": "shine",
+  "start": 17.15,
+  "end": 18.5,
+  "dur": 1.35,
+  "match": 1.0
+ },
+ {
+  "name": "woosh",
+  "start": 18.55,
+  "end": 19.65,
+  "dur": 1.1,
+  "match": 1.0
+ },
+ {
+  "name": "ui_01",
+  "start": 0.05,
+  "end": 0.95,
+  "dur": 0.9,
+  "match": 1.0
+ },
+ {
+  "name": "ui_02",
+  "start": 1.05,
+  "end": 2.45,
+  "dur": 1.4,
+  "match": 1.0
+ },
+ {
+  "name": "ui_03",
+  "start": 2.45,
+  "end": 3.45,
+  "dur": 1.0,
+  "match": 1.0
+ },
+ {
+  "name": "ui_04",
+  "start": 3.45,
+  "end": 4.65,
+  "dur": 1.2,
+  "match": 1.0
+ },
+ {
+  "name": "ui_05",
+  "start": 4.65,
+  "end": 6.55,
+  "dur": 1.9,
+  "match": 1.0
+ },
+ {
+  "name": "ui_06",
+  "start": 6.95,
+  "end": 8.5,
+  "dur": 1.55,
+  "match": 1.0
+ },
+ {
+  "name": "ui_07",
+  "start": 8.55,
+  "end": 10.05,
+  "dur": 1.5,
+  "match": 1.0
+ }
+]
