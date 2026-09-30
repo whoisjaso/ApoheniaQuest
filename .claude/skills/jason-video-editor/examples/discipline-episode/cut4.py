@@ -6,7 +6,7 @@ EP = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = f"{EP}/full.mov"; SLOW = 0.5
 # (part, a, b, text, tag, [slow ranges])
 KEEP = [
- ("a04", 21.84, 24.78, "I'm black as fuck, and my dick is big as fuck.", "hook", [(24.35, 24.78)]),
+ ("a04", 21.84, 24.78, "I'm not weak, and my dick is big as fuck.", "hook", [(24.35, 24.78)]),
  ("a01", 18.0, 19.28, "A lot of people believe that", "succ", []),
  ("a01", 21.8, 25.95, "in order to be successful, you need to be ^disciplined, which is true.", "succ", []),
  ("a01", 27.0, 28.45, "But they're saying that", "arent", []),
@@ -26,7 +26,7 @@ KEEP = [
  ("a03", 40.45, 43.7, "who !smokes every single day, !drinks every single day,", "loser", []),
  ("a04", 4.35, 6.4, "+Redirect your discipline", "redirect", []),
  ("a04", 7.6, 11.15, "to actually benefit your fucking future. Make it ^fun.", "redirect", []),
- ("a04", 16.0, 24.78, "When I started the habit of going to the gym every single day of the week, because I'm not a bitch, and I'm black as fuck, and my dick is big as fuck.", "gym", [(24.35, 24.78)]),
+ ("a04", 16.0, 24.78, "When I started the habit of going to the gym every single day of the week, because I'm not a bitch, and I'm not weak, and my dick is big as fuck.", "gym", [(24.35, 24.78)]),
  ("a04", 27.35, 35.35, "The way I started it was just buying +new fucking +clothes, because now it's given me a fucking reason to go to the gym, to be a fly-ass young nigga.", "clothes", [(35.0, 35.35)]),
  ("a04", 37.95, 38.95, "Make it ^fun.", "fun2", []),
  ("a04", 39.75, 40.95, "The reason why you quit", "reward", []),
@@ -88,7 +88,8 @@ caps = []
 for ki, (p, a, b, txt, tag, slows) in enumerate(KEEP):
     W = json.load(open(f"{EP}/{p}_words.json"))
     vw = [x for x in W if x["start"] >= a - 0.05 and x["end"] <= b + 0.05]
-    cw = txt.split(); vn = [norm(x["word"]) for x in vw]; cn = [norm(c.lstrip("!+^")) for c in cw]
+    ALIAS = {"week": "weak", "pick": "dick", "beach": "bitch", "biggest": "big", "work": "fuck", "about": "not", "booking": "fucking", "clue": "clothes", "art": "are"}
+    cw = txt.split(); vn = [ALIAS.get(norm(x["word"]), norm(x["word"])) for x in vw]; cn = [norm(c.lstrip("!+^")) for c in cw]
     tim = [None] * len(cw)
     for blk in difflib.SequenceMatcher(None, cn, vn, autojunk=False).get_matching_blocks():
         for j in range(blk.size): tim[blk.a + j] = (vw[blk.b + j]["start"], vw[blk.b + j]["end"])
@@ -106,5 +107,18 @@ for ki, (p, a, b, txt, tag, slows) in enumerate(KEEP):
         insl = any(ss - 0.08 <= s <= ee for ss, ee in slows)
         caps.append({"k": ki, "t": word.upper(), "f0": round(mapt(s, ki)), "f1": round(mapt(min(max(e, s + 0.05), b), ki)),
                      "emph": bool(mark), "tone": TONE.get(mark, "gold"), "curse": base in CURSE and insl, "tag": tag, "end": i == len(cw) - 1})
+json.dump(caps, open("captions.json", "w"), indent=0)
+
+# timing fix-up: when the recognizer merged two words into one token ("biggest" = big as), spread the squeezed words evenly
+from itertools import groupby
+for k, grp in groupby(range(len(caps)), key=lambda i: caps[i]["k"]):
+    idx = list(grp)
+    for j in range(1, len(idx) - 1):
+        a_, b_, n_ = caps[idx[j - 1]], caps[idx[j]], caps[idx[j + 1]]
+        if b_["f0"] - a_["f0"] >= 8 and n_["f0"] - b_["f0"] <= 1:  # word jammed against the next one
+            b_["f0"] = round((a_["f0"] + n_["f0"]) / 2)
+        elif b_["f0"] - a_["f0"] <= 0 and n_["f0"] - b_["f0"] >= 8:  # jammed against the previous one
+            b_["f0"] = round((a_["f0"] + n_["f0"]) / 2)
+    for j in range(len(idx) - 1): caps[idx[j]]["f1"] = max(caps[idx[j]]["f0"] + 2, min(caps[idx[j]]["f1"], caps[idx[j + 1]]["f0"] + 6))
 json.dump(caps, open("captions.json", "w"), indent=0)
 print("frames", f, round(f / 30, 2), "pieces", len(pieces), "words", len(caps))

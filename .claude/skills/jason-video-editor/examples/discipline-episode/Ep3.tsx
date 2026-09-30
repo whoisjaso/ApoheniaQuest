@@ -19,11 +19,11 @@ const FLIP = CUT + 48;
 const T = (tag: string) => tagSpan(tag);
 // every frame is derived from the spoken words
 const B = {
-  hookFuck: w("FUCK", 2), successful: w("SUCCESSFUL"), disciplined: w("DISCIPLINED"), from: w("FROM", 1), arent: w("AREN'T"),
+  hookFuck: w("FUCK", 1), successful: w("SUCCESSFUL"), disciplined: w("DISCIPLINED"), from: w("FROM", 1), arent: w("AREN'T"),
   actually1: w("ACTUALLY", 1), are: w("ARE"), where: w("WHERE"), overeat: w("OVEREAT"), smoke: w("SMOKE"), club: w("CLUB"), slutted: w("SLUTTED"),
   bullshit: w("BULLSHIT"), habits: w("HABITS"), alive: w("ALIVE"), god: w("GOD"),
   authority: w("AUTHORITY"), loser1: w("LOSER", 1), redirect: w("REDIRECT"), actually: w("ACTUALLY", 2), make1: w("MAKE", 1), gym: w("GYM", 1),
-  gymFuck: w("FUCK", 6), because3: w("BECAUSE", 2), reward: w("REWARD"), loser2: w("LOSER", 2), smoker: w("SMOKER"), alcoholic: w("ALCOHOLIC"), over: w("GET", 2),
+  gymFuck: w("FUCK", 4), because3: w("BECAUSE", 2), reward: w("REWARD"), loser2: w("LOSER", 2), smoker: w("SMOKER"), alcoholic: w("ALCOHOLIC"), over: w("GET", 2),
 };
 const [, succ1] = T("succ"), [arent0] = T("arent"), [, where1] = T("where");
 const [list0, list1] = T("list"), [why0, why1] = T("why"), [brain0, brain1] = T("brain"), [alive0, alive1] = T("alive");

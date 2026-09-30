@@ -78,3 +78,8 @@ Every delivered video gets an entry: Jason's score, what he called out, what's l
 4. **Hook = the cleanest, boldest line, as-is.**
    - This episode opens on "I'm black as fuck, and my dick is big as fuck." (Jason's wording for part 04 ~0:21–22.)
    - No notification or graphic on the hook when the line carries itself.
+
+### Episode #2 v2 score: **7/10**. Note: the caption wasn't his exact words.
+- He confirmed "I'm not weak, and my dick is big as fuck." v2 wrongly captioned "I'm black as fuck", from his loose paraphrase of the hook request.
+- **Rule:** captions follow the **confirmed words**. When a new message paraphrases a line that was already confirmed, keep the confirmed wording and flag the difference; never overwrite it.
+- **Rule:** align confirmed words to recognizer mis-hears with an alias map ("week"→weak, "pick"→dick, "biggest"→big as, "work"→fuck). Then spread merged tokens, so no two words pop on the same frame.
