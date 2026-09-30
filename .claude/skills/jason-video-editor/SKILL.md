@@ -5,6 +5,8 @@ description: Jason's default short-form video edit. Use EVERY time Jason drops r
 
 # Jason Video Editor — SOP
 
+> **THE BAR:** playbook §18 ("My work vs Original"): every sentence gets a designed visual beat, nouns become full-screen editorial cards, giant hero words go behind the speaker, numbers roll, one accent color sits on a moody grade, and there's editorial micro-type. Jason called it the standard he expects. Plan every edit against it.
+>
 > **Start here:** read `references/journal.md`. It holds the scored history (current best **7.7/10**), what Jason loved (locked), his corrections, and the backlog. Every new edit should beat the best score. After delivery, ask for his score and log it.
 
 The goal is an edit that makes the viewer stay, feel something, and act. It should match Jason's style exactly, with no need for him to ask for any of it.
@@ -97,7 +99,7 @@ Never `pkill -f` a pattern that matches your own shell command. It kills the too
   - Size and position so the head clips only the **bottom ~20–30%** of the word. It must stay readable. Check the stills.
 - **Pop-ups** (reel 5): dark rounded panel with a thin gold border, drop shadow, and scale-pop entrance. Headlines in Bebas Neue, body in Montserrat. Text = **the speaker's own words only**. ✅ green / ❌ red glowing icons for yes/no, right/wrong.
 - **Fonts allowed** (reel 2): hooks Bebas Neue/Archivo/Impact; captions Montserrat; talking-head accents Jost (Futura), Poppins, script. Never Comic Sans/Arial/Papyrus.
-- **Do not add** (not in the playbook): grain, vignette, color grades, progress bars, letterbox bars, "SLOW-MO" labels, screen flashes, record scratches, section labels the speaker never says, invented infographics.
+- **Grade (updated by §18):** a deliberate moody grade is now standard: desaturate ~30%, darken ~15%, one accent color. Still banned: random grain/vignette for its own sake, progress bars, letterbox bars, "SLOW-MO" labels, screen flashes, record scratches, section labels the speaker never says, invented infographics.
 
 ## Subconscious cues (the why behind the rules)
 - **Open loop** (cold open on the payoff): the brain wants closure, so viewers stay for the "how".

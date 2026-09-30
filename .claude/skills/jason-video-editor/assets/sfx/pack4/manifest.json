@@ -1,0 +1,51 @@
+[
+ {
+  "name": "cyber_shift",
+  "start": 0.78,
+  "end": 2.28,
+  "dur": 1.5,
+  "match": 1.0
+ },
+ {
+  "name": "basscrack",
+  "start": 2.75,
+  "end": 4.3,
+  "dur": 1.55,
+  "match": 1.0
+ },
+ {
+  "name": "cinestrike",
+  "start": 4.45,
+  "end": 6.02,
+  "dur": 1.57,
+  "match": 1.0
+ },
+ {
+  "name": "ripple_textures",
+  "start": 6.35,
+  "end": 7.48,
+  "dur": 1.13,
+  "match": 1.0
+ },
+ {
+  "name": "distortion_glitch",
+  "start": 8.08,
+  "end": 9.62,
+  "dur": 1.54,
+  "match": 1.0
+ },
+ {
+  "name": "ripple_textures_2",
+  "start": 10.0,
+  "end": 11.38,
+  "dur": 1.38,
+  "match": 1.0
+ },
+ {
+  "name": "alienated_warps",
+  "start": 11.45,
+  "end": 13.04,
+  "dur": 1.59,
+  "match": 1.0
+ }
+]

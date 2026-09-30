@@ -31,3 +31,9 @@ Every delivered video gets an entry: Jason's score, what he called out, what's l
 **Next iteration protocol:** Jason will send examples (edits, captions, cues, SFX). For each: decode it (frames at 15fps, labels, audio), add the rule to `playbook.md` with its source, apply it on the next video, then log the new score here.
 
 **DECIDED 2026-09-27 (Jason: yes):** keyword color = meaning. Yellow is the default, green = money/wins, red = problems/pain. It's layered on the locked yellow two-tier style. Applies from episode #2.
+
+**2026-09-30: The standard defined.** Jason pointed to reel 22 ("My work vs Original") as *the* standard. The gap from 7.7 is now concrete:
+- episode #1 had captions, combos and small pop-ups;
+- the standard has a **full designed scene per sentence** (image collages, editorial cards, rolling numbers, cinematic B-roll), a **moody grade with one accent**, and **callbacks**.
+- Next edit: plan a beat sheet with one visual per sentence *before* rendering.
+- Needs from Jason: images/B-roll for his nouns (or approval to use stock/AI-generated images, e.g. via Higgsfield), and his logo/brand assets.

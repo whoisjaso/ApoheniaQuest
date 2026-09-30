@@ -320,3 +320,46 @@ Rules it confirms:
   - Nextel/Digital Text and Counter/Bicycle Chain overlap in the source, so their edges are approximate.
 - **"Essential SFX for your UI Designs"** (7 unnamed clips on a timeline, `ui_01…ui_07`). No names are shown, so use them only as UI-motion alternatives after listening.
 - Showcase format note: both are "comment SFX" lead magnets again (×4 creators now). Jason's own SFX/fonts giveaway reel would fit the same funnel.
+
+
+## 18. ★ THE STANDARD: "My work vs Original" (reel 22) ★
+**Jason: "a really good example of the standard I expect."** A plain talking head (a woman in a bright kitchen) turned into an editorial, magazine-grade piece. **Every sentence gets its own designed visual beat.** This is the bar every edit is measured against.
+
+**Beat by beat (what the editor did to each line):**
+| She says | On screen |
+|---|---|
+| "You absolutely…" | grade applied (desaturated, darker, moody). Amber caption low-center, fades in |
+| "…a **traditional job**…" | cut to **full-screen card**: polaroid photos of blue-collar workers **drop in one by one** on dark, then the card flips to light with "Traditional *job*" (bold sans + italic serif) |
+| "…**good and stable money**" | full-screen dark **textured B&W photo** (hands/cash) + font combo "Good & stable / *money*" (sans + big italic serif). Tiny editorial text in the corners, ✦ star glyphs |
+| "in **2026**" | **giant amber numerals ROLL** (2035 → 2031 → 2027 → **2026**) **behind her** (text-behind) |
+| "**And NO**, I'm not going to *tell you to*…" | giant amber "And NO" **behind her**, then small white "I'm not going to" + amber italic serif "tell you to" |
+| "…become an **influencer**" | **white editorial page**: the word split "INFLU … ENCER" with a photo collage **swapping in the gap** (an influencer and lifestyle images), tiny body text + social icons |
+| "**None of that**" | giant amber "None of that" behind her, then a **recap collage**: every earlier image **whips back in around her** while her shot shrinks into a window. Visual callback |
+| "This is not a video where I'm going to…" | back to the plain graded shot, amber caption + small italic subline. **A breather beat** |
+| "…have **hope**…" | **cinematic stock B-roll** (a silhouette in a dusk field), a giant amber "**HOPE**" with the silhouette **in front of** the letters, small "believe … yourself" words, ••• dots |
+
+**The system underneath:**
+1. **One accent color** (amber/orange #F5A300-ish) on a **desaturated, dark grade**. Nothing else is colored.
+2. **Nouns become full-screen designed cards**: an image/collage + a font combo + editorial micro-type. Not a small pop-up; a whole scene.
+3. **Giant hero words behind the speaker** at the start of sentences (text-behind), 2–3 per 20s.
+4. **Numbers roll** like a slot counter to their final value.
+5. **Editorial micro-typography**: tiny paragraphs, labels, stars, thin rules in the corners. It's texture that reads as "designed", not as information.
+6. **Pacing**: a new visual beat about every 1.5–3s. Plain-shot breathers between the big cards.
+7. **Callbacks**: the recap collage reuses earlier images, which rewards attention.
+8. **Stock/cinematic B-roll for abstract feelings** ("hope" → a silhouette at dusk), with the word huge and the subject in front.
+9. Card transitions: photos drop/stack with a slight rotation (polaroid), images slide/scale in, and whole-frame flips from dark to light.
+
+**For Jason (9:16):** same system, vertical. Grade: desaturate ~30%, lift blacks slightly, darken ~15%. Accent: **his locked yellow** plays the amber role; green/red keep their meaning.
+
+## 19. More references (reels 19–21)
+- **Premium SFX pack** (7, extracted to `assets/sfx/pack4/`): Cyber Shift, Basscrack, CineStrike, Ripple Textures, Distortion Glitch (very loud; use at ~0.3), Ripple Textures 2, Alienated Warps. Heavy, cinematic, "trailer" hits, for the §18 editorial style: CineStrike/Basscrack for giant hero words, Ripple/Warps for card transitions, Cyber Shift/Distortion Glitch for tech moments.
+- **"Use ___ to ___" SFX reel** (music bed under the voice, so not extractable cleanly):
+  - iPhone notification → **stop the scroll** (the hook)
+  - Riser → **build tension**
+  - Negation (buzz) → **highlight a negative**
+  - Whoosh → **transitions**
+  - Typewriter → **captions**
+  - Slice → **switch clips**
+  - Its captions use **red for the negatives** ("to stop", "tension", "a negative") and **yellow for the positives** ("transitions", "captions", "to switch"). This independently confirms Jason's color rule.
+  - New rule: **open with a notification sound** (a pattern interrupt the viewer's phone-trained brain reacts to).
+- **Kinetic-typography promo** (sound-pack ad, no footage): white UI world, word-by-word blur-in type, a fake Google search typing "perfect sound effects?", a Drive folder of SFX, a big mascot word "lazy → ambitious". **Screen-UI storytelling for product/offer ads**: use it for Jason's own offers.
