@@ -7,6 +7,8 @@ description: Jason's default short-form video edit. Use EVERY time Jason drops r
 
 > **THE BAR:** playbook §18 ("My work vs Original"): every sentence gets a designed visual beat, nouns become full-screen editorial cards, giant hero words go behind the speaker, numbers roll, one accent color sits on a moody grade, and there's editorial micro-type. Jason called it the standard he expects. Plan every edit against it.
 >
+> **Visuals:** for every edit, output an image prompt pack (see `references/image-prompts.md`: style lock + one prompt per picturable noun). Jason generates the images (ChatGPT, or the Higgsfield connector when he approves credits) and they fill the §18 cards.
+>
 > **Start here:** read `references/journal.md`. It holds the scored history (current best **7.7/10**), what Jason loved (locked), his corrections, and the backlog. Every new edit should beat the best score. After delivery, ask for his score and log it.
 
 The goal is an edit that makes the viewer stay, feel something, and act. It should match Jason's style exactly, with no need for him to ask for any of it.
