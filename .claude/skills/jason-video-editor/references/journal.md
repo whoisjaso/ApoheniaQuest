@@ -96,3 +96,21 @@ Every delivered video gets an entry: Jason's score, what he called out, what's l
 - **QA against references before sending.**
   - Compare the render frame by frame with v9 (motion-graphics talking head), v19 (kinetic iOS type) and v21 (the "My work vs Original" standard).
   - Fix anything below them first.
+
+## Episode #3 "Find your purpose": build notes
+- **Audio:** Jason asked for the background cut and the voice louder.
+  - Chain: `scripts/voice_enhance.py` (DeepFilterNet3 → EQ → comp → −14 LUFS). Re-transcribing the clean audio fixed many words.
+  - Examples: "taste of fucking psycho mcnugget" → "change the fucking cycle, my nigga"; "that gets you into the doors".
+- **Cut:**
+  - Sections are contiguous, so his natural pauses stay.
+  - Only dead air over 1.4s is shortened (to 0.75s).
+  - The unclear 0:55–1:18 aside in part 2 was removed; "never ever…" joins "…you will never find your purpose by being still".
+- **Motion graphics (no AI images):**
+  - iOS Notes hook; iMessage stack; Reminders grade ticks with a rolling ordinal; grad cap; goldfish bowl → ocean; path network → one destination; green counter; "you can sell" tiles → flood.
+  - Overwhelm notification rain → grey freeze; Chase card → Safari tabs → "0% started".
+  - Notes questions; thinking-spinner → "doing" bar; Chess.com board + streak → gold king PURPOSE; same-week calendar; loop ring (paradigm/script/cycle).
+  - Hero CHANGE; Activity walk ring 5:00; iMessage from a stranger; doors of light; DOING ×3; plans ✓ actions ✓ EXECUTE.
+  - CTA: comment PURPOSE → DM "AI guide + course link".
+- **Real brand logos:** from simple-icons (`assets/logos/`), rendered as masks.
+- **Hero words behind the head:** top ≈ 570–610 on this framing (the durag starts ~760).
+- **Ops:** remotion stills bundles copy `public/` into /tmp every run. Delete `/tmp/remotion-webpack-bundle-*` after each run, or the disk allowance fills.
