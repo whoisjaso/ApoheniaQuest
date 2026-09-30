@@ -11,6 +11,23 @@ Variants:
 - **Polaroid (for drop-in collages):** "…as a single instant polaroid photo with white border, lying on a dark surface, slight rotation" + style lock (use 1:1)
 - **Textured background card (for font combos):** "…extreme close-up texture, abstract, room for large text in the center" + style lock
 
+## RULE: prompts must be in depth (Jason, 2026-09-30)
+One-line prompts are banned. Every prompt is one pasteable paragraph (~150–250 words) that covers these, in order:
+1. **Format:** "Vertical 9:16 cinematic editorial photograph."
+2. **Subject + action + emotion:** body language that *says the line*, e.g. head hanging = "I'm not disciplined".
+3. **Wardrobe:** the recurring man is Jason (Black man, clear glasses, beige bucket hat over a black durag, teal-green blazer, white polo). Shoot him from behind, in silhouette, or face-cropped so no AI face competes with his real one. Optionally attach his headshot as the face reference.
+4. **Setting + props:** specific, concrete objects that are the metaphor.
+5. **Camera:** angle, lens (mm), aperture, focus point, where the subject sits.
+6. **Lighting:** the source(s), direction, and what the single accent light hits.
+7. **Color grade:** desaturated with crushed blacks. The ONE accent color matches the beat's keyword color: yellow #FFD24A default, green-gold for wins, dirty red for problems.
+8. **Texture:** film grain, halation, vignette.
+9. **Composition for the edit:** name the exact zone kept empty for text (upper third, the spotlight circle, the windshield…). It must match where the combo or caption sits.
+10. **Mood:** the line's meaning in one phrase, plus the aesthetic reference.
+11. **Negatives:** no text, letters, numbers, logos or watermarks, no extra limbs or distorted hands, no readable screens or labels, plus beat-specific negatives.
+
+Above each prompt, write an **Edit use** line saying which card it becomes, what text overlays it, where, and any motion (push-in, crossfade).
+Reference implementation: `examples/discipline-episode.image-prompts.md`, IMG 01–15.
+
 ---
 
 ## Pack: Episode #1, "Ego / Label" (use for the re-edit)
