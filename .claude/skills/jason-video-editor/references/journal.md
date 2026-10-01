@@ -161,4 +161,9 @@ Every delivered video gets an entry: Jason's score, what he called out, what's l
 
 **Why this should lift the floor:** before, each session re-learned the method and lost points on the same mistakes (over-cutting, wrong words, fake sounds). Now the 8.3 decisions are the starting point. The next score depends on the new video's beats, not on rebuilding the machine.
 
-**Honest limit:** the rebuilt video layer and timeline are faithful reconstructions, being tested end-to-end on dummy footage (result in the next entry). They aren't byte-for-byte the files from the lost session. The visible difference to watch is the "still" freeze-frame look on episode #4.
+**Honest limit:** the rebuilt video layer and timeline are faithful reconstructions, tested end-to-end on dummy footage. They aren't byte-for-byte the files from the lost session. The visible difference to watch is the "still" freeze-frame look on episode #4.
+
+**Test result (2026-10-01):** passed. Dummy footage was run through every step with episode #3's exact sections and words: cut (9 pieces, 515 words, 2:36) → new project → typecheck clean → 11 stills.
+- Every graphic rendered: Notes hook, grade ticks, $1,000,000 counter, sell tiles, PROBLEM/CHANGE/EXECUTE hero words, Chess streak, the black-and-white freeze on "STILL", the PURPOSE CTA and the follow card with Jason's avatar.
+- Text-behind-you works: the cutout layer clips the bottom of the hero word.
+- Not yet proven on real footage: the person cutout's edges, and caption timing on a real transcript. Episode #4 is the first real check.
