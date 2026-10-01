@@ -1,4 +1,4 @@
-# Jason Video Editor
+# VideoEdit — Jason Video Editor
 
 Jason's short-form video editing system. Raw vertical footage in → finished 9:16 reel out
 (hook, cuts, raw captions with colored keywords, SFX, iOS/brand motion graphics, follow CTA).
