@@ -9,13 +9,14 @@ description: Jason's default short-form video edit. Use EVERY time Jason drops r
 >
 > **Visuals:** for every edit, output an image prompt pack (see `references/image-prompts.md`: style lock + one prompt per picturable noun). Jason generates the images (ChatGPT, or the Higgsfield connector when he approves credits) and they fill the §18 cards.
 >
-> **Start here:** read `references/journal.md`. It holds the scored history (current best **7.7/10**), what Jason loved (locked), his corrections, and the backlog. Every new edit should beat the best score. After delivery, ask for his score and log it.
+> **Start here:** read `references/journal.md`. It holds the scored history (current best **8.3/10**, episode #3), what Jason loved (locked), his corrections, and the backlog. Every new edit should beat the best score. After delivery, ask for his score and log it.
 
 The goal is an edit that makes the viewer stay, feel something, and act. It should match Jason's style exactly, with no need for him to ask for any of it.
 Every choice below has a *reason*. If a choice has no rule or reason behind it, it doesn't go in the video.
 The rules come from `references/playbook.md`, which was decoded frame-by-frame from the creator Jason studies. **Don't invent effects.**
 
 ## Jason's non-negotiables
+- **Never lose a render (Jason, 2026-10-01).** The moment a final MP4 exists: send it to Jason, then copy it to `renders/epNN-short-title-vN.mp4` (Git LFS) and push, *before* any further work. Raw footage goes to `raw/epNN/` (LFS) and is pushed as soon as it arrives. Sessions are ephemeral; anything unpushed is gone.
 - **Raw is the brand.** Never bleep, mute or asterisk anything, n-word included. Captions show every word exactly as spoken. Mention reach risk at most once per project, then drop it.
 - **Curse words get the comedic slow-mo:** 0.5x speed with an octave pitch drop, a push-in zoom, and a whoosh. This is Jason's own rule. Do it on the curses that land as punchlines (2–3 per video), not on every one. Never slow-mo a slur.
 - **No background music in the render.** Jason adds a trending track in TikTok. Deliver voice + SFX only, and recommend a track from the playbook's music-by-mood list (§5).

@@ -1,25 +1,20 @@
-# APOHENIA: SALES QUEST
+# Jason Video Editor
 
-A playful browser learning game that teaches a fixed ethical sales funnel through
-Pokémon-style NPC conversations. Journey across a 10-region adventure map, face
-7 objection "boss battles", customize your avatar, and sharpen your skills with
-practice drills — all inside a single HTML page with zero build tooling.
+Jason's short-form video editing system. Raw vertical footage in → finished 9:16 reel out
+(hook, cuts, raw captions with colored keywords, SFX, iOS/brand motion graphics, follow CTA).
 
-## How to run
+## Where everything lives
+| Path | What it is |
+|---|---|
+| `.claude/skills/jason-video-editor/SKILL.md` | The editing SOP. Start here. |
+| `.claude/skills/jason-video-editor/references/playbook.md` | Every rule decoded from Jason's reference reels (19 reels, §1–§20), incl. §18 THE STANDARD |
+| `.claude/skills/jason-video-editor/references/journal.md` | Scored history of every episode. Current best: **episode #3, 8.3/10** |
+| `.claude/skills/jason-video-editor/examples/` | The exact code behind each episode (purpose-episode = the 8.3 baseline) |
+| `.claude/skills/jason-video-editor/assets/` | SFX packs, real iOS sounds, brand logos, avatar |
+| `renders/` | Every finished MP4 (Git LFS) |
+| `raw/epNN/` | Source footage (Git LFS) |
 
-Open `index.html` in any modern browser, or serve the folder with any static
-server (e.g. `python3 -m http.server`). No build step, no dependencies.
-Progress is saved in `localStorage`.
-
-## Project structure
-
-- `data/parts/` — content data (levels, bosses, practice drills, meta)
-- `assets/js/` — game engine (app, dialogue, map, save, audio, portrait, practice)
-- `assets/css/` — styling
-- `data/game-data.js` — merges the content parts into the final game data
-- `tests/`, `validate.js` — data validation and skill verification scripts
-
-## Art & music
-
-All artwork and music in this project is original and code-generated
-(Canvas/WebAudio) — no external assets.
+## Rules
+- A render isn't done until it's delivered to Jason **and** pushed to `renders/`.
+- Every edit gets a plain-English, scored journal entry.
+- Every choice Jason approves becomes a written rule in the skill, committed immediately.
