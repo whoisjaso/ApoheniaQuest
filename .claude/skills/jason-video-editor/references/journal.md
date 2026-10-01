@@ -126,3 +126,21 @@ Every delivered video gets an entry: Jason's score, what he called out, what's l
 - **Correction:** the closing line is "**Commit all your plans and actions onto God, then execute.**" I had guessed "Come up with…".
   - **Rule:** faith lines are his signature. When a garbled word could be "God", ask, never guess.
 - **This episode is now the baseline:** the purpose-episode format (`examples/purpose-episode/`) is the default for talking-head motivational content.
+
+---
+
+## 2026-10-01 · New session, repo rebuilt as **VideoEdit**
+- **What happened:** the old session was lost. The episode #3 raw clips lived only in that container and were never pushed. Jason still has the final 8.3 render on his side. If he uploads it, it goes to `renders/ep03-find-your-purpose-v1.mp4` as the reference to beat.
+- **What survived:** everything that *teaches* the edit. That's the playbook (19 reels), this journal, the episode #3 code (`examples/purpose-episode/`) and all the assets. **8.3 stays the bar.** Episode #4 must beat it using the same recipe.
+- **What changed so it can't happen again:**
+  - The repo is now dedicated to video editing. The old game is deleted and the repo is renamed VideoEdit.
+  - Videos go through Git LFS.
+  - Every final MP4 → sent to Jason → `renders/` → pushed, before anything else (SKILL.md non-negotiable).
+  - Raw footage → `raw/epNN/` → pushed as soon as it arrives.
+- **Lesson for the craft:** the rules are the asset, not the files. A new session reproduces an 8.3 from `SKILL.md`, `playbook.md`, this journal and the example code alone.
+
+### Plan to beat 8.3 on episode #4 (from the backlog, highest impact first)
+1. **Real CapCut SFX** in place of the synthesized stand-ins (backlog #1 since episode #1). These need Jason's exports.
+2. **Text-behind-you on every hero word**, checked so the head clips at most 30%. This was the weakest-looking element in episode #3 stills.
+3. **A callback in the last 10s:** replay the hook's graphic as the payoff closes the loop (§18 calls for callbacks; episode #3 didn't have one).
+4. **Caption accuracy:** ask Jason about every low-confidence word *before* rendering, not after. Episode #3 lost points on the "God" line.
