@@ -2,7 +2,7 @@ import React from "react";
 import { Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { clamp } from "../fx";
 import { theme } from "../theme";
-import { CUT } from "./timeline";
+import { CUT } from "../ep/timeline";
 import { GOLD } from "./Captions";
 
 /**

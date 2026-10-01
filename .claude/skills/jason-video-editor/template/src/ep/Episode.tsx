@@ -1,150 +1,163 @@
+/**
+ * EPISODE BEAT SHEET. This file is episode #3 ("Find your purpose", 8.3/10), ported 1:1 to the template layout.
+ * For a new episode keep the STRUCTURE and replace the beats:
+ *   A = every word a graphic or sound hits, via at(section, WORD, n)   (never hard-coded frames)
+ *   HERO = 2-4 hero words behind his head  |  HIDE = caption windows a graphic already says  |  TOPS = caption height per beat
+ *   Sound = one line per event, real iOS sounds 1:1  |  graphics from ../lib/Mg (+ ../lib/Ios) in spoken order  |  CTA + FollowCard last
+ */
 import React from "react";
 import { AbsoluteFill, Audio, Sequence, staticFile } from "remotion";
-import "@fontsource/bebas-neue/400.css";
-import "@fontsource/marcellus/400.css";
-import "@fontsource/bodoni-moda/500-italic.css";
-import "@fontsource/jost/200.css";
-import "@fontsource/playfair-display/400-italic.css";
-import "@fontsource/hanken-grotesk/800.css";
-import "@fontsource/great-vibes/400.css";
-import "@fontsource/archivo-black/400.css";
-import "@fontsource/inter/500.css";
-import { ComboTitle, ComboName } from "../ComboTitle";
-import { Captions, Overlay, PAGES } from "./Captions";
-import { FollowCard, PopRow, PopText } from "./Graphics";
-import { CUT, EDL, phraseEnd, SLOW, tagSpan, w } from "./timeline";
-import { Video } from "./Video";
+import "@fontsource/nunito-sans/600.css";
+import "@fontsource/nunito-sans/900.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/inter/800.css";
+import { Captions, PAGES } from "../lib/Captions";
+import { FollowCard } from "../lib/Graphics";
+import { HeroWord, R, Y } from "../lib/Ios";
+import { BannerStack, Banner, Chess, Counter, CtaPurpose, DoingStack, Doors, Execute, Goldfish, Grades, Graduate, Loop, MoneyResearch, Notes, Overwhelm, Paths, SameWeek, SellTiles, ThinkDo, Walk } from "../lib/Mg";
+import { at, CUT, EDL, sec } from "./timeline";
+import { Video } from "../lib/Video";
 
-export const OUTRO = 90;
-
-// every frame below is derived from the spoken words
-const B = {
-  manip: w("MANIPULATE"), label: w("LABEL"), ego1: w("EGO", 1), ego2: w("EGO", 2), assume: w("ASSUMPTION", 1),
-  corp1: w("CORPORATE", 1), against: w("AGAINST"), no: w("NO"), yes1: w("YES", 1), won: w("WON"), type: w("TYPE"),
-  seven: w("SEVEN", 2), dollars: w("DOLLARS", 2), proceed: w("PROCEED", 2),
-  seven0: w("SEVEN", 1), dollars0: w("DOLLARS", 1), proceed0: w("PROCEED", 1), fast: w("FAST"), labeled: w("LABELED"),
-  confirmed: w("CONFIRMED"), yes2: w("YES", 2), ego3: w("EGO", 3), identity: w("IDENTITY"), weed: w("WEED"),
-  underlying: w("UNDERLYING", 1), ego4: w("EGO", 4), ego5: w("EGO", 5),
+export const OUTRO = 160;
+const FLIP = CUT + 118;
+const A = {
+  always: at("grades", "ALWAYS"), told: at("grades", "TOLD"), doG: at("grades", "DO"), first: at("grades", "FIRST"), second: at("grades", "SECOND"), third: at("grades", "THIRD"),
+  tenth: at("grades", "TENTH"), eleventh: at("grades", "ELEVENTH"), twelfth: at("grades", "TWELFTH"), but: at("grades", "BUT"), graduate: at("grades", "GRADUATE"),
+  goldfish: at("ocean", "GOLDFISH"), released: at("ocean", "RELEASED"), ocean: at("ocean", "OCEAN"), theres: at("ocean", "THERE'S"), destination: at("ocean", "DESTINATION"),
+  lets: at("ocean", "LET'S"), scenario: at("ocean", "SCENARIO"), two: at("ocean", "TWO"), million: at("ocean", "MILLION"), month: at("ocean", "MONTH"),
+  rubber: at("sell", "RUBBER"), cars: at("sell", "CARS"), service: at("sell", "SERVICE"), pocket: at("sell", "POCKET"), anything: at("sell", "ANYTHING", 1), anything2: at("sell", "ANYTHING", 2),
+  options: at("problem", "OPTIONS"), overwhelmed: at("problem", "OVERWHELMED"), nothing: at("problem", "ANYTHING"), and: at("problem", "AND"), problem: at("problem", "PROBLEM"),
+  money: at("me", "MONEY"), research: at("me", "RESEARCH"), never: at("me", "NEVER"), doM: at("me", "DO", 2), andMe: at("me", "AND", 1), pondering: at("me", "PONDERING"),
+  q1: at("me", "WHAT", 2), q2: at("me", "WHAT", 3), q3: at("me", "WHAT", 4), realize: at("me", "YOU", 1),
+  thinking: at("doors", "THINKING"), doing: at("doors", "DOING", 2), anythingD: at("doors", "ANYTHING", 2), like: at("doors", "LIKE", 1), chess: at("doors", "CHESS"), every: at("doors", "EVERY", 1),
+  purposeC: at("doors", "PURPOSE", 5), butD: at("doors", "BUT"), live: at("doors", "LIVE"), youre: at("doors", "YOU'RE", 1), because: at("doors", "BECAUSE"),
+  paradigm: at("doors", "PARADIGM"), script: at("doors", "SCRIPT"), cycle: at("doors", "CYCLE", 1), change: at("doors", "CHANGE"), take: at("doors", "TAKE"), five: at("doors", "FIVE"),
+  promise: at("doors", "PROMISE"), somebody: at("doors", "SOMEBODY", 1), that: at("doors", "THAT", 2), doors: at("doors", "DOORS"), changes: at("doors", "CHANGES"),
+  neverN: at("never", "NEVER"), still: at("execute", "STILL"), doing1: at("execute", "DOING", 1), doing2: at("execute", "DOING", 2), doing3: at("execute", "DOING", 3),
+  come: at("execute", "COMMIT"), god: at("execute", "GOD"), plans: at("execute", "PLANS"), actions: at("execute", "ACTIONS"), execute: at("execute", "EXECUTE"),
 };
-const [, corpB] = tagSpan("corp");
-const [, coldB] = tagSpan("cold");
-const [, afterB] = tagSpan("after");
-const FLIP = CUT + 48;
+const [, hook1] = sec("hook"), [ocean0] = sec("ocean"), [sell0] = sec("sell"), [prob0, prob1] = sec("problem"), [me0] = sec("me"), [, doors1] = sec("doors");
 
-// reel 5: zoom in on key lines (each zoom gets a whoosh — reels 6, 9)
-const PUNCHES = [B.seven0, B.manip, B.label, B.assume, B.against, B.won, B.seven, B.weed, B.ego5];
-
-// reel 8 font pairings, only on significant lines; words are the speaker's own
-const hold = (at: number, end: number) => Math.max(end + 8, at + 45);
-// behind: true → text sits BEHIND the speaker (reel 7 masking); used on the 3 biggest title moments
-const COMBOS: { combo: ComboName; big: string; small: string; at: number; exit: number; size?: number; behind?: boolean; top?: number }[] = [
-  { combo: "modern", small: "how to", big: "MANIPULATE", at: B.manip - 2, exit: hold(B.manip, phraseEnd("MANIPULATE")), size: 128, behind: true, top: 300 },
-  { combo: "mozart", big: "Label", small: "people", at: B.label - 2, exit: hold(B.label, phraseEnd("LABEL")) },
-  { combo: "tempting", small: "a thing called", big: "ego", at: B.ego1 - 2, exit: hold(B.ego1, phraseEnd("EGO", 1)), size: 250, behind: true, top: 50 },
-  { combo: "modern", small: "use that", big: "AGAINST 'EM", at: B.against - 2, exit: hold(B.against, phraseEnd("AGAINST")), size: 110 },
-  { combo: "modern", small: "you already", big: "WON", at: B.won - 2, exit: hold(B.won, phraseEnd("WON")), size: 150 },
-  { combo: "sugary", big: "fast", small: "decision", at: B.fast - 2, exit: hold(B.fast, phraseEnd("FAST")), size: 130 },
-  { combo: "mozart", big: "Ego", small: "archetype", at: B.ego5 - 2, exit: hold(B.ego5, phraseEnd("ARCHETYPE")), size: 230, behind: true, top: 30 },
-  { combo: "mozart", big: "Ego", small: "archetype", at: CUT + 4, exit: CUT + OUTRO - 4, size: 230, top: 30 },
+const HERO = [
+  { text: "PROBLEM", at: A.problem - 1, until: prob1 - 4, color: R, size: 195, top: 600 },
+  { text: "ANYTHING", at: A.anythingD - 1, until: A.like - 2, color: Y, size: 168, top: 610 },
+  { text: "CHANGE", at: A.change - 1, until: A.change + 80, color: Y, size: 215, top: 590 },
+  { text: "NEVER", at: A.neverN - 1, until: A.neverN + 58, color: R, size: 255, top: 570 },
 ];
-
-// pop-ups (reel 5 pop-up transition; reels 3/6/9 pop + click)
-const POPS = [B.seven0, B.ego2, B.assume, B.corp1, B.no, B.yes1, B.type - 4, B.seven, B.proceed, B.labeled, B.confirmed, B.yes2, B.ego3, B.identity, B.underlying, B.ego4];
-
-const OVERLAYS: Overlay[] = [
-  { from: B.seven0, to: w("PROCEED", 1) + 20, text: "$7,000" },
-  { from: B.ego2, to: B.assume - 2, text: "EGO how you think other people perceive you" },
-  { from: B.assume, to: B.assume + 32, text: "AN ASSUMPTION" },
-  { from: B.corp1, to: corpB - 4, text: "WHITE CORPORATE VOICE" },
-  { from: B.no, to: B.won + 50, text: "NO YES" },
-  { from: B.type - 4, to: B.type + 40, text: "THAT TYPE OF PERSON" },
-  { from: B.seven, to: B.proceed - 2, text: "$7,000" },
-  { from: B.proceed, to: B.proceed + 50, text: "HOW WOULD YOU LIKE TO PROCEED" },
-  { from: B.labeled, to: afterB + 8, text: "LABELED CONFIRMED YES" },
-  { from: B.ego3, to: B.identity + 34, text: "EGO IDENTITY" },
-  { from: B.underlying, to: B.ego4 - 2, text: "UNDERLYING MESSAGE" },
-  { from: B.ego4, to: B.ego4 + 34, text: "EGO" },
+// captions hide while a graphic already carries those words (never show the same words twice)
+const HIDE: [number, number][] = [
+  [A.ocean - 1, A.theres], [A.two - 1, sell0], [A.q1 - 1, A.realize], [A.purposeC - 1, A.butD], [A.paradigm - 1, A.change], [A.doing1 - 1, A.come], [A.execute - 1, CUT], [CUT, CUT + OUTRO],
+  ...HERO.map((h) => [h.at - 1, h.until] as [number, number]),
+];
+const TOPS: [number, number, number][] = [
+  [A.goldfish - 10, A.theres, 1560], [A.theres, A.lets, 1660], [sell0 - 6, prob0, 1640], [A.like - 2, A.butD, 1590], [A.because - 2, A.change, 1500], [A.that - 2, doors1, 1460],
 ];
 
 const Sfx: React.FC<{ f: number; name: string; v?: number }> = ({ f, name, v = 0.6 }) => (
-  <Sequence from={Math.max(0, Math.round(f))} durationInFrames={150} layout="none">
-    <Audio src={staticFile(name)} volume={v} />
-  </Sequence>
+  <Sequence from={Math.max(0, Math.round(f))} durationInFrames={150} layout="none"><Audio src={staticFile(name)} volume={v} /></Sequence>
 );
-// stand-ins for his CapCut sounds (named in the playbook master map)
 const S = {
-  bassImpact: "sfx/deep_bass.wav",          // "Bass impact" — hooks / statements
-  whoosh: "sfx/whoosh.wav",                 // "swish_whoosh (large)" — zooms
-  shutter: "sfx/camera_shutter.wav",         // "click (camera shutter sound single shot)" — transitions
-  pop: "sfx/pop.wav", click: "sfx/click.wav",// "pop! (mouth tap)" + "Click! Mouse single-click" — pop-ups
-  typing: "sfx/typing.wav",                  // "Keyboard Typing 01" — captions
-  riser: "sfx/riser.wav",                    // "RISER_01" / "Metallic Riser" — suspense, reveals
-  reveal: "sfx/synth_hit.wav",              // "Magic reveal" — big reveals
-  metal: "sfx/metallic_hit.wav",            // "Metallic Riser" hit — reveals
-  money: "sfx/kaching.wav",                  // "Money" — money talk
-  bell: "sfx/ding.wav",                      // "Bell ding" — CTA
+  tritone: "sfx/ios/ios_tritone.wav", received: "sfx/ios/ios_received.wav", tink: "sfx/ios/ios_tink.wav", rings: "sfx/ios/ios_rings.wav", paid: "sfx/ios/ios_success.wav", key: "sfx/ios/ios_key.wav",
+  whoosh: "sfx/whoosh.wav", swoosh: "sfx/swoosh.wav", pop: "sfx/pop.wav", click: "sfx/click.wav", typing: "sfx/typing.wav", riser: "sfx/pack3/riser.wav", hit: "sfx/ui/reverb_hit.wav",
+  cine: "sfx/pack4/cinestrike.wav", crack: "sfx/pack4/basscrack.wav", neg: "sfx/ui/negative_glitch_1.wav", data: "sfx/ui/data_loading.wav", shine: "sfx/pack3/shine.wav", tape: "sfx/tapestop.wav",
+  kaching: "sfx/kaching.wav", bass: "sfx/deep_bass.wav", shutter: "sfx/camera_shutter.wav", bell: "sfx/ding.wav", success: "sfx/ui/success_ui.wav", ui: "sfx/pack3/ui_02.wav",
 };
-
 const Sound: React.FC = () => {
-  const sentenceStarts = PAGES.filter((p, i) => i === 0 || p.words[0].k !== PAGES[i - 1].words[0].k).map((p) => p.from);
+  const starts = PAGES.filter((p, i) => i === 0 || p.words[0].k !== PAGES[i - 1].words[0].k).map((p) => p.from);
+  const cuts = EDL.slice(1).filter((e, i) => !(EDL[i].p === e.p && Math.abs(EDL[i].b - e.a) < 0.02)).map((e) => e.f0);
   return (
     <>
-      {/* cold open (open loop): result first — hook bass impact + money */}
-      <Sfx f={B.seven0 - 1} name={S.bassImpact} v={0.7} />
-      <Sfx f={B.dollars0} name={S.money} v={0.5} />
-      {/* hooks + statements: bass impact */}
-      <Sfx f={B.manip - 1} name={S.bassImpact} v={0.75} />
-      <Sfx f={B.label - 1} name={S.bassImpact} v={0.55} />
-      {/* zooms: whoosh (punches + slow-mo push-ins) */}
-      {[...PUNCHES, ...SLOW.map((s) => s.f0)].map((p) => <Sfx key={`w${p}`} f={p - 4} name={S.whoosh} v={0.35} />)}
-      {/* transitions between clips: camera shutter on every cut */}
-      {EDL.slice(1).filter((e, i) => EDL[i].speed === 1 && e.speed === 1).map((e) => <Sfx key={`sh${e.f0}`} f={e.f0 - 1} name={S.shutter} v={0.28} />)}
-      {/* text pops up: pop + click (combos and pop-ups) */}
-      {[...COMBOS.map((c) => c.at), ...POPS].map((f) => [<Sfx key={`p${f}`} f={f - 1} name={S.pop} v={0.45} />, <Sfx key={`c${f}`} f={f + 1} name={S.click} v={0.4} />])}
-      {/* captions: keyboard typing as each new caption line starts */}
-      {sentenceStarts.map((f) => <Sfx key={`t${f}`} f={f} name={S.typing} v={0.16} />)}
-      {/* suspense → payoff */}
-      <Sfx f={B.seven - 58} name={S.riser} v={0.45} />
-      <Sfx f={B.dollars} name={S.money} v={0.5} />
-      {/* reveals */}
-      <Sfx f={B.won - 40} name={S.riser} v={0.3} />
-      <Sfx f={B.won} name={S.metal} v={0.5} />
-      <Sfx f={B.ego4} name={S.reveal} v={0.45} />
-      <Sfx f={B.ego5 - 50} name={S.riser} v={0.4} />
-      <Sfx f={B.ego5} name={S.reveal} v={0.55} />
-      {/* CTA: bell ding when the button flips to Following */}
+      <Audio src={staticFile("ep/cut.mp4")} />
+      {/* hook: the real iPhone Tri-tone as the empty Notes page appears */}
+      <Sfx f={2} name={S.tritone} v={0.6} />
+      {[A.always, A.told, A.doG].map((f) => <Sfx key={`t${f}`} f={f - 2} name={S.tritone} v={0.45} />)}
+      {[A.first, A.second, A.third, A.tenth, A.eleventh, A.twelfth].map((f) => <Sfx key={`k${f}`} f={f} name={S.tink} v={0.9} />)}
+      <Sfx f={A.graduate - 2} name={S.success} v={0.45} />
+      <Sfx f={A.goldfish - 10} name={S.whoosh} v={0.35} />
+      <Sfx f={A.released - 2} name={S.swoosh} v={0.5} />
+      <Sfx f={A.ocean - 1} name={S.hit} v={0.45} />
+      <Sfx f={A.destination - 40} name={S.riser} v={0.3} />
+      <Sfx f={A.destination} name={S.shine} v={0.5} />
+      <Sfx f={A.million + 14} name={S.paid} v={0.55} />
+      {[A.rubber, A.cars, A.service, A.pocket, A.anything].map((f) => [<Sfx key={`p${f}`} f={f - 1} name={S.pop} v={0.45} />, <Sfx key={`c${f}`} f={f + 1} name={S.click} v={0.35} />])}
+      <Sfx f={A.anything2} name={S.data} v={0.3} />
+      <Sfx f={A.overwhelmed - 2} name={S.neg} v={0.3} />
+      {[0, 6, 13, 21].map((d) => <Sfx key={`ow${d}`} f={A.options + d} name={S.tritone} v={0.25} />)}
+      <Sfx f={A.nothing} name={S.tape} v={0.45} />
+      <Sfx f={A.problem - 1} name={S.cine} v={0.5} />
+      <Sfx f={A.money} name={S.kaching} v={0.45} />
+      {[0, 5, 10, 15, 20, 25].map((d) => <Sfx key={`kb${d}`} f={A.research - 14 + d} name={S.key} v={0.8} />)}
+      <Sfx f={A.doM} name={S.neg} v={0.3} />
+      {[A.q1, A.q2, A.q3].map((f) => <Sfx key={`q${f}`} f={f} name={S.typing} v={0.35} />)}
+      <Sfx f={A.thinking - 6} name={S.data} v={0.25} />
+      <Sfx f={A.doing} name={S.paid} v={0.55} />
+      <Sfx f={A.anythingD - 1} name={S.cine} v={0.45} />
+      <Sfx f={A.chess - 2} name={S.tritone} v={0.5} />
+      <Sfx f={A.every} name={S.success} v={0.35} />
+      <Sfx f={A.live} name={S.ui} v={0.4} />
+      <Sfx f={A.because - 2} name={S.whoosh} v={0.35} />
+      <Sfx f={A.cycle - 1} name={S.neg} v={0.3} />
+      <Sfx f={A.change - 1} name={S.crack} v={0.5} />
+      <Sfx f={A.five + 12} name={S.rings} v={0.55} />
+      <Sfx f={A.somebody - 2} name={S.received} v={0.6} />
+      <Sfx f={A.doors - 1} name={S.shine} v={0.5} />
+      <Sfx f={A.changes} name={S.hit} v={0.4} />
+      <Sfx f={A.neverN - 1} name={S.crack} v={0.45} />
+      <Sfx f={A.still} name={S.tape} v={0.45} />
+      {[A.doing1, A.doing2, A.doing3].map((f) => <Sfx key={`d${f}`} f={f - 1} name={S.pop} v={0.5} />)}
+      <Sfx f={A.plans} name={S.tink} v={0.9} />
+      <Sfx f={A.actions} name={S.tink} v={0.9} />
+      <Sfx f={A.god - 1} name={S.shine} v={0.5} />
+      <Sfx f={A.execute - 1} name={S.cine} v={0.55} />
+      <Sfx f={A.execute - 1} name={S.bass} v={0.5} />
+      <Sfx f={CUT + 46} name={S.pop} v={0.45} />
+      <Sfx f={CUT + 70} name={S.received} v={0.6} />
       <Sfx f={FLIP} name={S.bell} v={0.55} />
+      {cuts.map((f) => <Sfx key={`sh${f}`} f={f - 1} name={S.shutter} v={0.18} />)}
+      {starts.map((f) => <Sfx key={`ty${f}`} f={f} name={S.typing} v={0.08} />)}
     </>
   );
 };
 
-const renderCombo = (c: (typeof COMBOS)[number]) => (
-  <AbsoluteFill key={c.at} style={{ alignItems: "center", paddingTop: c.top ?? 150 }}>
-    <ComboTitle combo={c.combo} big={c.big} small={c.small} at={c.at} exitAt={c.exit} size={c.size ?? 140} />
-  </AbsoluteFill>
-);
-
 export const Episode: React.FC = () => (
   <AbsoluteFill style={{ background: "#000" }}>
-    <Video punches={PUNCHES} behind={COMBOS.filter((c) => c.behind).map(renderCombo)} fgRanges={COMBOS.filter((c) => c.behind).map((c) => [c.at - 2, Math.min(c.exit + 8, CUT)] as [number, number])} />
-    {COMBOS.filter((c) => !c.behind).map((c) => (
-      <AbsoluteFill key={c.at} style={{ alignItems: "center", paddingTop: c.big === "Ego" ? 200 : 150 }}>
-        <ComboTitle combo={c.combo} big={c.big} small={c.small} at={c.at} exitAt={c.exit} size={c.size ?? 140} />
-      </AbsoluteFill>
-    ))}
-    <PopText at={B.seven0} until={coldB - 1} head="$7,000" gold size={200} />
-    <PopText at={B.ego2} until={B.assume - 2} head="EGO" sub="how you think other people perceive you" />
-    <PopText at={B.assume} until={B.assume + 32} head="AN ASSUMPTION" gold />
-    <PopText at={B.corp1} until={corpB - 4} head="WHITE CORPORATE VOICE" size={96} />
-    <PopRow items={[{ label: "NO", at: B.no }, { label: "YES", at: B.yes1 }]} until={B.won + 50} />
-    <PopText at={B.type - 4} until={B.type + 40} head="THAT TYPE OF PERSON" size={100} />
-    <PopText at={B.seven} until={B.proceed - 2} head="$7,000" gold size={200} />
-    <PopText at={B.proceed} until={B.proceed + 50} head="HOW WOULD YOU LIKE TO PROCEED?" size={76} />
-    <PopRow items={[{ label: "LABELED", at: B.labeled }, { label: "CONFIRMED", at: B.confirmed }, { label: "YES", at: B.yes2 }]} until={afterB + 8} top={1250} column />
-    <PopRow items={[{ label: "EGO", at: B.ego3 }, { label: "IDENTITY", at: B.identity }]} until={B.identity + 34} check={false} />
-    <PopText at={B.underlying} until={B.ego4 - 2} head="UNDERLYING MESSAGE" size={100} />
-    <PopText at={B.ego4} until={B.ego4 + 34} head="EGO" gold size={180} />
-    <Captions hide={[[CUT, CUT + OUTRO], ...COMBOS.map((c) => [c.at - 1, c.exit + 7] as [number, number])]} dedupe={OVERLAYS} />
+    <Video punches={[A.overwhelmed, A.problem, A.doM, A.change, A.neverN, A.execute]} freeze={[A.still, A.still + 22]}
+      behind={HERO.map((h) => <HeroWord key={h.at} {...h} />)} fgRanges={HERO.map((h) => [h.at - 2, h.until] as [number, number])} />
+    {/* 1 — hook: the empty Notes page */}
+    <Notes from={3} to={hook1 - 8} title="What I want to do with my life" lines={[]} empty />
+    {/* 2 — told what to do: messages from everyone */}
+    <BannerStack until={A.first - 3} items={[
+      { at: A.always - 2, logo: "imessage", color: "#34DA50", logoBg: "#34DA50", app: "MESSAGES", title: "Mom", body: "Do your homework before you go out." },
+      { at: A.told - 2, logo: "imessage", color: "#34DA50", logoBg: "#34DA50", app: "MESSAGES", title: "Coach", body: "Practice at 6. Don’t be late." },
+      { at: A.doG - 2, logo: "imessage", color: "#34DA50", logoBg: "#34DA50", app: "MESSAGES", title: "Mr. Davis", body: "Assignment due 8:00 AM." },
+    ]} />
+    <Grades from={A.first - 4} to={A.but} items={[
+      { label: "1st grade", n: 1, at: A.first }, { label: "2nd grade", n: 2, at: A.second }, { label: "3rd grade", n: 3, at: A.third },
+      { label: "10th grade", n: 10, at: A.tenth }, { label: "11th grade", n: 11, at: A.eleventh }, { label: "12th grade", n: 12, at: A.twelfth }]} />
+    <Graduate at={A.graduate - 2} until={ocean0 + 6} />
+    <Goldfish from={A.goldfish - 8} release={A.released} ocean={A.ocean} to={A.theres + 4} />
+    <Paths from={A.theres} to={A.lets} words={[]} dest={A.destination} />
+    <Counter from={A.scenario - 6} to={sell0} steps={[{ at: A.two, dur: 18, value: 200000 }, { at: A.million, dur: 16, value: 1000000 }]} suffix=" /month" />
+    <SellTiles from={sell0 - 4} to={prob0 + 2} flood={A.anything2} tiles={[
+      { emoji: "➰", label: "Rubber bands", at: A.rubber }, { emoji: "🚗", label: "Cars", sub: "like I do", at: A.cars },
+      { emoji: "🤝", label: "A service", sub: "like I do", at: A.service }, { emoji: "⌚", label: "Pocket watches", at: A.pocket }, { emoji: "✨", label: "Anything", at: A.anything }]} />
+    <Overwhelm from={A.options} freeze={A.nothing} to={A.and} />
+    <MoneyResearch money={A.money - 4} research={A.research} never={A.never} doAt={A.doM} to={A.andMe} />
+    <Notes from={A.pondering - 4} to={A.realize} title="Me, figuring it out" lines={[
+      { text: "What are the things that I like?", at: A.q1 }, { text: "What are the things that I want to do?", at: A.q2 }, { text: "What am I good at?", at: A.q3 }]} />
+    <ThinkDo think={A.thinking - 12} doAt={A.doing} to={A.doing + 60} />
+    <Chess from={A.like - 2} chess={A.chess} streak={A.every} purpose={A.purposeC} to={A.butD} />
+    <SameWeek from={A.live - 4} to={A.because - 2} />
+    <Loop from={A.because - 2} to={A.change - 1} words={[{ text: "PARADIGM", at: A.paradigm }, { text: "SCRIPT", at: A.script }, { text: "CYCLE", at: A.cycle }]} />
+    <Walk at={A.take - 4} five={A.five} to={A.promise} />
+    <Banner at={A.somebody - 2} until={A.that - 2} logo="imessage" color="#34DA50" logoBg="#34DA50" app="MESSAGES" title="Unknown number" body="Yo, we met on the walk earlier. Let’s link 🤝" />
+    <Doors from={A.that - 2} open={A.doors} life={A.changes} to={doors1 + 4} />
+    <DoingStack ats={[A.doing1, A.doing2, A.doing3]} to={A.come} />
+    <Execute plans={A.plans} actions={A.actions} god={A.god} exec={A.execute} to={CUT} />
+    <Captions hide={HIDE} tops={TOPS} />
+    <CtaPurpose from={CUT} dm={CUT + 70} to={CUT + OUTRO} />
     <FollowCard flipAt={FLIP} />
     <Sound />
   </AbsoluteFill>

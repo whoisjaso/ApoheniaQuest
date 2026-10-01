@@ -27,23 +27,55 @@ The rules come from `references/playbook.md`, which was decoded frame-by-frame f
 - **ego archetype** (not "architect")
 - nigga / niggas (not the hard-r the model outputs)
 
-## Pipeline
+## THE 8.3 RECIPE: the default pipeline for every talking-head edit
+Episode #3 scored **8.3**, the best so far. These are the exact steps that produced it. Follow them in order; every step is there because skipping it cost points in an earlier episode (see "Why each step exists" below). Start from this recipe, not from scratch.
 ```
-bash scripts/setup.sh                          # ffmpeg, Vosk model (from npm), MediaPipe 0.10.14 (bundled segmentation model)
-# 1. JOIN multi-part uploads (verify seams: last frame of part N == first frame of part N+1; check md5 for duplicates)
-ffmpeg -f concat -safe 0 -i parts.txt -c copy full.mov
-# 2. TRANSCRIBE → words.json + phrases.txt
-PYTHONPATH=/tmp/stub python3 scripts/transcribe.py full.mov work/
-# 3. WRITE edit.json by hand (see "Editorial pass"), then CUT (frame-exact, slow-mo, caption alignment)
-python3 scripts/cut.py edit.json work/
-# 4. PERSON MATTE for text-behind-you
+bash scripts/setup.sh                                    # ffmpeg, Vosk, MediaPipe (+ DeepFilterNet notes in voice_enhance.py)
+# 0. SAVE RAW FIRST: copy every raw part to raw/epNN/ (Git LFS) and push before any editing
+# 1. CLEAN VOICE, per part (DeepFilterNet3 -> EQ -> comp -> -14 LUFS)
+python3 scripts/voice_enhance.py p1.mov p1_voice.wav
+# 2. TRANSCRIBE THE CLEAN VOICE (not the raw file; it fixes many mis-heard words)
+PYTHONPATH=/tmp/stub python3 scripts/transcribe.py p1_voice.wav p1c/
+# 3. WRITE sections.json BY HAND (see examples/purpose-episode/sections.json): his sections, in his order, exact words
+# 4. CUT: keeps his pauses, shortens only dead air > 1.4s (to 0.75s)
+python3 scripts/cut_sections.py sections.json work/      # -> work/cut.mp4, edl.json, captions.json
+# 5. PERSON CUTOUT for hero words behind his head
 python3 scripts/matte.py work/cut.mp4 work/fg.webm work/edl.json
-# 5. TEMPLATE: copy template/ → project, npm i, put cut.mp4 + fg.webm + avatar.png in public/ep, sfx in public/sfx,
-#    captions.json + edl.json in src/ep, then edit the beat sheet in src/ep/Episode.tsx
-# 6. VERIFY stills at every beat → fix → full render → re-check frames + audio levels → deliver (<30MB: re-encode 6Mbps if needed)
+# 6. PROJECT: the 8.3 build, every asset in place
+bash scripts/new_episode.sh proj && cp work/{cut.mp4,fg.webm} proj/public/ep/ && cp work/{captions.json,edl.json} proj/src/ep/
+# 7. BEAT SHEET: rewrite proj/src/ep/Episode.tsx (it ships as episode #3's; keep the structure, replace the beats)
+# 8. STILLS at every beat -> QA against the reference reels -> fix -> full render
+# 9. DELIVER: send the MP4 to Jason -> copy to renders/epNN-title-v1.mp4 -> push -> journal entry -> ask for his score
 ```
-Remotion needs `--browser-executable=/opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell` in the cloud container.
+Remotion needs `--browser-executable=/opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell` in the cloud container. Delete `/tmp/remotion-webpack-bundle-*` after each stills run, or the disk fills.
 Never `pkill -f` a pattern that matches your own shell command. It kills the tool call; kill by PID instead.
+
+**Step 3, sections.json (where the score is won or lost):**
+- One entry per section of his argument, in **his** order: hook → problem → argument → payoff → CTA. Never reorder, never drop a key word.
+- Cut only stutters, restarts, unclear asides, and dead air. His pauses are delivery; the script handles dead air.
+- The text is his **exact** words. Mark keywords `^gold` (default), `+green` (money/wins), `!red` (problems). Wrap words a graphic will show in `{…}` so captions don't repeat them.
+- Add every recognizer mis-hear to `alias` (heard → said) so caption timing still locks to his voice.
+- **Before rendering, send Jason a list of every word you're unsure of** (faith lines especially: a garbled word that could be "God" is asked, never guessed).
+
+**Step 7, the beat sheet (template/src/ep/Episode.tsx):**
+- **One designed motion graphic per sentence**, built from `src/lib/Mg.tsx` (Notes, iMessage banners, counters, tiles, Chess, Loop, Doors, Execute, CTA…) and `src/lib/Ios.tsx`. A new idea gets a new component in the same style; add it to `Mg.tsx` in the skill afterward.
+- Time everything from his words: `at("section", "WORD", n)`. Never hard-code frames.
+- **2–4 hero words behind his head** (`HERO`), colored by meaning. Check stills: the head clips at most 30% of the word.
+- `HIDE` every caption window a graphic already says. `TOPS` moves captions clear of the graphic.
+- **Sound map:** one line per event. Real iOS sounds 1:1 for UI moments, cinestrike/basscrack on the lines that land, riser into payoffs, shutter only on section changes.
+- Real brand logos (`assets/logos/`, from simple-icons) for any app or company he names.
+
+### Why each step exists (what each one fixed)
+| Step | Episode that taught it | What went wrong without it |
+|---|---|---|
+| Clean voice + transcribe the clean audio | #3 | Background noise; mis-heard words ("psycho mcnugget" for "cycle, my nigga") |
+| Exact confirmed words, ask before render | #2 v2 (7/10), #3 ("God") | Captions said something he never said |
+| Keep his pauses, cut only dead air | #2 (7/10) | Over-cut, choppy; the message stopped making sense |
+| His logic order, hook = his boldest first line | #2, #3 | Hook felt staged; argument felt broken |
+| Motion graphics, not AI images | #3 (8.3) | #2's photo cards looked generic next to the reference reels |
+| Captions always move | #2 (7/10) | Static captions felt dead |
+| Real iOS sounds, real logos | #2 (7/10) | Synth chimes sounded fake |
+| QA against the references before sending | #3 (8.3) | Weak beats shipped that would have been caught |
 
 ## Editorial pass (the thinking, done before any code)
 1. **Read the whole transcript and name the video's one idea.** Example: "Label people → they commit → they buy."
@@ -52,9 +84,9 @@ Never `pkill -f` a pattern that matches your own shell command. It kills the too
    - **Cold open:** take the payoff line itself, 1.5–3s of it ("It's seven thousand dollars. How would you like to proceed?"). Show the result before the method, which creates a curiosity gap that holds viewers until the payoff. The same seconds play again later: give the cold open its own keep-segment. cut.py maps captions per segment, so reused seconds are safe.
    - **Then the thesis line:** the taboo or direct promise, with a bass impact and a font combo. Something must move within the first 15 frames.
 4. **Keep list:**
-   - Cut warm-up ("what's up…"), dead air over 0.45s, stutters/retakes (keep the clean take), mumbled or garbled lines, and tangents that don't serve the one idea.
+   - Cut warm-up ("what's up…"), stutters/retakes (keep the clean take), mumbled or garbled lines, and tangents that don't serve the one idea. Dead air: only gaps over ~1.4s, shortened to ~0.75s (his pauses are delivery; 8.3 rule).
    - Keep raw color that carries personality (e.g. the weed line). It's the brand.
-   - Target 45–60% of raw length. For short-form, aim under ~1:50.
+   - Length follows the argument, not a percentage. For short-form, aim under ~1:50. Episode #3 kept every section whole and trimmed only dead air.
 5. **Correct every caption line by hand from context.** The offline model mishears slang: it writes "nigger" for "nigga", "boys" for "voice", "she and robbers" for "shit and rob us". Write the text as Jason actually said it. Flag low-confidence spots to him.
    **But never "correct" a word the model heard clearly** (high confidence, real word) just because another word seems more likely. Example: the model heard "ego archetype", which is Jason's term; it was wrongly changed to "architect". Jason's own terms: see "Jason's vocabulary" below.
 6. **Gold keywords are rationed.** Pick about 1 per idea, and only concept words (the words that, read in sequence, *are* the lesson). Don't gold a word every time it repeats, or viewers stop reading gold. Roughly 8% of words. Specify by `[WORD, occurrence]`.
@@ -116,7 +148,7 @@ Never `pkill -f` a pattern that matches your own shell command. It kills the too
 
 ## Verification checklist (before delivering)
 - [ ] Hook: payoff cold open ≤3s, then thesis with bass impact; motion in the first 15 frames
-- [ ] No dead air over 0.45s; no stutters; frame-exact A/V (video frames = audio length)
+- [ ] No dead air over ~1.4s (his pauses kept); no stutters; frame-exact A/V (video frames = audio length)
 - [ ] Captions checked by hand against context; slang and names right; raw words unaltered
 - [ ] Gold ≤ ~1 per idea; curse slow-mos only on punchline curses
 - [ ] Every zoom → whoosh, every cut → zoom transition + shutter, every pop-up → pop + click, reveals → riser/reveal, money → money, CTA flip → bell

@@ -144,3 +144,21 @@ Every delivered video gets an entry: Jason's score, what he called out, what's l
 2. **Text-behind-you on every hero word**, checked so the head clips at most 30%. This was the weakest-looking element in episode #3 stills.
 3. **A callback in the last 10s:** replay the hook's graphic as the payoff closes the loop (§18 calls for callbacks; episode #3 didn't have one).
 4. **Caption accuracy:** ask Jason about every low-confidence word *before* rendering, not after. Episode #3 lost points on the "God" line.
+
+## 2026-10-01 · Skill rebuilt around the 8.3 recipe (no new video; this is about the system)
+**Jason's ask:** "I want to know how Claude got the 8.3, so the skill starts there. The next video should land at 8.0–8.3 automatically, not drop back to 6.7 or 7.7."
+
+**What I found (plain English):**
+- The 8.3 method was in the repo, but scattered. The main instructions (`SKILL.md`) still described the **episode #1 way** (the 7.7 way): chop every pause over 0.45s, old caption code, no voice cleanup. A fresh session follows `SKILL.md`, so it would have started from 7.7.
+- Worse, two of the files the 8.3 build needed were **never saved**: the newer video layer (it added the freeze-frame) and the newer timeline (it looks up words by section). Even with the raw clips, episode #3 couldn't have been rebuilt from the repo.
+
+**What I changed:**
+1. **`SKILL.md` now opens with "THE 8.3 RECIPE"**: the exact 10 steps that made episode #3, in order, with a table showing which mistake each step prevents. Rules that contradicted it (e.g. "cut pauses over 0.45s") were updated.
+2. **The template IS the 8.3 build now.** The motion-graphics library, moving captions, iOS cards, video layer and timeline all sit in `template/src/lib/`. `Episode.tsx` ships as episode #3's beat sheet, ported 1:1, so a new session sees a real 8.3 edit and replaces the beats.
+3. **The two lost files were rebuilt** from how the 8.3 code uses them (freeze-frame = hold one frame in black and white; timeline = find any spoken word by section).
+4. **`scripts/cut_sections.py`**: the episode #3 cut as a reusable tool. You give it a `sections.json` (his sections, his exact words, colored keywords); it keeps his pauses and only trims dead air. Episode #3's own `sections.json` is saved in `examples/purpose-episode/`.
+5. **`scripts/new_episode.sh`** builds a ready project in one command, with every sound (real iOS, packs), logo and the avatar in the right place. Episode #3 had done this by hand.
+
+**Why this should lift the floor:** before, each session re-learned the method and lost points on the same mistakes (over-cutting, wrong words, fake sounds). Now the 8.3 decisions are the starting point. The next score depends on the new video's beats, not on rebuilding the machine.
+
+**Honest limit:** the rebuilt video layer and timeline are faithful reconstructions, being tested end-to-end on dummy footage (result in the next entry). They aren't byte-for-byte the files from the lost session. The visible difference to watch is the "still" freeze-frame look on episode #4.
